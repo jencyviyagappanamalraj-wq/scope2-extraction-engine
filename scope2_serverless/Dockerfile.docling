@@ -1,0 +1,10 @@
+# OPTIONAL container worker with Docling (WITH_DOCLING=1 bash deploy.sh). Docling needs PyTorch and AI models
+# (several GB), far above the 250 MB limit of a zip Lambda; a Lambda container image may be up to 10 GB.
+# The models are downloaded at BUILD time, so the Lambda never downloads anything at run time.
+FROM public.ecr.aws/lambda/python:3.13
+COPY requirements-worker.txt ./
+RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu \
+ && pip install --no-cache-dir -r requirements-worker.txt docling \
+ && docling-tools models download -o /opt/docling-models
+COPY engine/*.py engine/index.html ${LAMBDA_TASK_ROOT}/
+CMD ["worker_handler.handler"]

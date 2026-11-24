@@ -1,0 +1,1394 @@
+{
+ "doc": "wikipedia_india.html",
+ "elements": [
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "India"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Capital",
+   "value": "New Delhi 28°36′50″N 77°12′30″E ﻿ / ﻿ 28.61389°N 77.20833°E ﻿ / 28.61389; 77.20833"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Largest city by city proper population",
+   "value": "Mumbai"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Official languages",
+   "value": "Hindi English"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Native languages",
+   "value": "424 languages"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Religion (2011)",
+   "value": "79.8% Hinduism 14.2% Islam 2.3% Christianity 1.7% Sikhism 0.7% Buddhism 0.4% Jainism 0.23% unaffiliated 0.65% other"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Demonyms",
+   "value": "Indian others"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Government",
+   "value": "Federal parliamentary republic"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• President",
+   "value": "Droupadi Murmu"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Vice President",
+   "value": "C. P. Radhakrishnan"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Prime Minister",
+   "value": "Narendra Modi"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Legislature",
+   "value": "Parliament"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Upper house",
+   "value": "Rajya Sabha"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Lower house",
+   "value": "Lok Sabha"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Dominion",
+   "value": "15 August 1947"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Republic",
+   "value": "26 January 1950"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Total",
+   "value": "3,287,263 km 2 (1,269,219 sq mi) ( 7th )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Water (%)",
+   "value": "9.6"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• 2026 estimate",
+   "value": "1.48 billion ( 1st )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• 2011 census",
+   "value": "1,210,854,977 ( 2nd )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Density",
+   "value": "436.4/km 2 (1,130.3/sq mi) ( 30th )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "GDP ( PPP )",
+   "value": "2026 estimate"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Total",
+   "value": "$19.193 trillion ( 3rd )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Per capita",
+   "value": "$12,998 ( 121st )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "GDP (nominal)",
+   "value": "2026 estimate"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Total",
+   "value": "$4.060 trillion ( 6th )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "• Per capita",
+   "value": "$2,750 ( 148th )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Gini (2022)",
+   "value": "25.5 low inequality"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "HDI (2023)",
+   "value": "0.685 medium ( 130th )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Currency",
+   "value": "Indian rupee ( ₹ ) ( INR )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Time zone",
+   "value": "UTC +05:30 ( IST )"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Horizontal",
+    "horizontal",
+    "navy-blue"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": []
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "highlighted",
+    "centred",
+    "Image"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India, officially the Republic of India, is a country in South Asia."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Early in the 2nd millennium, Muslim armies from Central Asia intermittently overran India's northern plains, eventually establishing the Delhi Sultanate and drawing India into the cosmopolitan networks of medieval Islam."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Etymology"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "History"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Ancient India"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "story-telling",
+    "illustration",
+    "Manuscript"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Buddhist",
+    "rock-cut",
+    "Ajanta"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Based on coalescence of Mitochondrial DNA and Y Chromosome data, the earliest extant lineages of modern humans on the Indian subcontinent had reached there from Africa between 80,000 and 50,000 years ago, and with high likelihood by 55,000 years ago."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Medieval India"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Brihadisvara",
+    "Rajaraja",
+    "monarch"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Calligraphy",
+    "Sultanate",
+    "Delhi"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "The Indian early medieval age, from 600 to 1200 CE, was defined by regional kingdoms and cultural diversity."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Early modern India"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "century",
+    "emperor",
+    "Chisti"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Company",
+    "William",
+    "issued"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Modern India"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Presidency",
+    "Calcutta",
+    "Mahatma"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "commissioned",
+    "Chandigarh",
+    "partition"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "The 1848 appointment of Lord Dalhousie as the Governor General of the East India Company set the stage for changes essential to a modern state: consolidating and demarcating sovereignty, monitoring the population through censuses, educating citizens and rationalising the bureaucracy."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Rapid commercialisation of agriculture in the second half of the 19th century brought severe economic setbacks, leaving many small farmers dependent on the uncertainties of distant markets."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Geography"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Geology"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India accounts for the bulk of the Indian subcontinent, lying atop the Indian tectonic plate, a part of the Indo-Australian Plate."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": []
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Physical geography"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India's coastline measures 7,517 kilometres (4,700 mi) in length; of this distance, 5,423 kilometres (3,400 mi) belong to peninsular India and 2,094 kilometres (1,300 mi) to the Andaman, Nicobar, and Lakshadweep island chains."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Uttarakhand",
+    "Heritage",
+    "National"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Tungabhadra",
+    "peninsular",
+    "outcrops"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Ganges-Brahmaputra",
+    "Brahmaputra",
+    "Sentinel-"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Havelock",
+    "mangrove",
+    "Andaman"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Climate"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "classification",
+    "climate",
+    "India"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Agasthiyamalai",
+    "Tirunelveli",
+    "Western"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Karnataka",
+    "Southwest",
+    "Mallalli"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "dromedary",
+    "Desert"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Himachal",
+    "Pradesh",
+    "Sangla"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Biodiversity"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India's densest forests, such as the tropical moist forest of the Andaman Islands, the Western Ghats, and Northeast India, occupy about 3% of its land area."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "According to the IUCN Red List, India contains 1,021 threatened animal species—99 mammal, 82 bird, 105 reptile, 139 amphibian, 332 fish, 10 mollusk, and 254 other invertebrate —727 threatened plant species, and 4 threatened fungi species."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "taprobanis",
+    "Kadavoor",
+    "Attacus"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "approximately",
+    "majority",
+    "tigers"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Uttarakhand",
+    "National",
+    "Corbett"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "hawk-eagle",
+    "National",
+    "Crested"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Sundarbans",
+    "Saltwater",
+    "crocodile"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Government and politics"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Constitution",
+    "Democratic",
+    "Socialist"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "This foundation began to shift in the 1980s, when ethnic and political unrest in the northeastern state of Assam targeted Bengali -speaking migrants."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Minister",
+    "Narendra",
+    "India"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Cabinet: Officially known in India as the Union Council of Ministers, the Cabinet is the principal institution of governance."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Political parties: Since the mid-1980s—marking the second half of India's postcolonial history—the Bharatiya Janata Party, or BJP, has grown from a marginal party into a political giant."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "From the late 1980s to 2014, local or regional parties wielded heavy clout nationwide by anchoring coalition governments and holding the keys to making or breaking central rule."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Self-Respect",
+    "constitution",
+    "conference"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Muslim representation: The 1947 Partition of the subcontinent shattered the geographic and political weight of Indian Muslims."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Administrative divisions"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "territories",
+    "clickable",
+    "states"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Foreign and military policy"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Non-Aligned",
+    "Jawaharlal",
+    "Yugoslavia"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India’s foreign policy history is divided into four distinct periods, the first beginning with idealism at independence and ending with the 1962 Sino-Indian border war."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Economy"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "A major shift occurred during the 1990s as India rejoined the global economy."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Construction",
+    "Ootacamund",
+    "Municipal"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "agriculture",
+    "workforce",
+    "employed"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "agriculture",
+    "foreground",
+    "workforce"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "professional",
+    "Laboratory",
+    "programme"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Industries"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Bangalore",
+    "corporate",
+    "entrance"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India's total installed electricity capacity exceeds 532 GW, with non-fossil and renewable energy sources contributing more than 283.5 GW, or roughly 53%."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "manufacturing",
+    "third-largest",
+    "automobile"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "second-largest",
+    "drinkers",
+    "producer"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "communities",
+    "contributes",
+    "especially"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Demographics"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Migration from rural to urban areas has been an important dynamic in India's recent history."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "agglomeration",
+    "Gateway",
+    "largest"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "agglomeration",
+    "fifth-largest",
+    "multinational"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Languages"
+  },
+  {
+   "type": "table",
+   "page": 1,
+   "cells": [
+    [
+     "Language families and speakers in India"
+    ],
+    [
+     "Rank",
+     "Language family",
+     "Sub-family",
+     "Number of languages",
+     "Number of speakers",
+     "Percentage of speakers"
+    ],
+    [
+     "1",
+     "Indo-European",
+     "Indo-Aryan",
+     "21",
+     "945,052,555",
+     "78.05%"
+    ],
+    [
+     "Iranian",
+     "1",
+     "21,677",
+     "0%"
+    ],
+    [
+     "Germanic",
+     "1",
+     "259,678",
+     "0.02%"
+    ],
+    [
+     "2",
+     "Dravidian",
+     "",
+     "17",
+     "237,840,116",
+     "19.64%"
+    ],
+    [
+     "3",
+     "Austro-Asiatic",
+     "",
+     "14",
+     "13,493,080",
+     "1.11%"
+    ],
+    [
+     "4",
+     "Tibeto-Burman",
+     "",
+     "66",
+     "12,257,382",
+     "1.01%"
+    ],
+    [
+     "5",
+     "Semito-Hamitic",
+     "",
+     "1",
+     "54,947",
+     "0%"
+    ]
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "denomination",
+    "prominently",
+    "Malayalam"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "dominant",
+    "language",
+    "native"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "languages",
+    "relative",
+    "speakers"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Religion"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Hinduism is the majority faith followed by nearly 80% of the population; Islam is the largest minority at over 14%."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Shravanabelagola",
+    "pilgrim"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Chinnathurai",
+    "exterior",
+    "Church"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Zoroastrian",
+    "Mumbai",
+    "agiary"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Amritsar",
+    "pilgrim",
+    "Golden"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Synagogue",
+    "Interior",
+    "Kolkata"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Education"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "The central, state, and local governments manage education in India."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "blackboard",
+    "salutation",
+    "Ambedkar"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Srirangapatna",
+    "Masjid-i-Ala",
+    "Karnataka"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "construction",
+    "Engineering",
+    "engineering"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "examination",
+    "protesting",
+    "questions"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Health"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "undernutrition",
+    "supplementary",
+    "counselling"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Patients in India often face a stark choice: use basic, free, publicly funded health care or pay high out-of-pocket fees for better-equipped care from private doctors and hospitals."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Culture"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Society"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Although sometimes applied to other cultures and religions, caste is a fundamental social institution of India, most fully developed among Hindus."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "India has had a long history of religious pluralism that shapes its modern society."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "population",
+    "Telangana",
+    "scheduled"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "movement",
+    "Ramnami",
+    "members"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Ahmedabad",
+    "marriage",
+    "Gujarat"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "benefactor",
+    "low-income",
+    "Bangalore"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Visual art"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Most of the earliest large sculpture is Buddhist, either excavated from Buddhist stupas such as Sanchi, Sarnath and Amaravati, or is rock cut reliefs at sites such as Ajanta, Karla and Ellora."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Bhutesvara",
+    "Buddhist",
+    "Mathura"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "terracotta",
+    "Killing",
+    "Krishna"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Milkmaids",
+    "painting",
+    "Fluting"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Nataraja",
+    "century",
+    "bronze"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Mathematics"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "During the classical period of Indian mathematics (400 CE to 1200 CE), Aryabhata, Brahmagupta, Bhaskara II, Varāhamihira, and Madhava made important contributions."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Music"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Indian film music is music written for Indian cinema, generally composed by music directors and sung by playback singers."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Subbulakshmi",
+    "Carnatic",
+    "vocalist"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Woodstock",
+    "festival",
+    "Shankar"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Dance"
+  },
+  {
+   "type": "table",
+   "page": 1,
+   "cells": [
+    [
+     "Dance",
+     "Origin state",
+     "Region",
+     "Type or origin",
+     "Musical accompaniment"
+    ],
+    [
+     "Bharatanatyam",
+     "Tamil Nadu",
+     "South India",
+     "Temple dance",
+     "Cinna Melam, Carnatic music"
+    ],
+    [
+     "Kathak",
+     "Uttar Pradesh",
+     "North India",
+     "Historical dance",
+     "Hindustani music"
+    ],
+    [
+     "Kathakali",
+     "Kerala",
+     "South India",
+     "Dance-drama",
+     "Madhalam drum ensembles; Sopana vocal music"
+    ],
+    [
+     "Kuchipudi",
+     "Andhra Pradesh",
+     "South India",
+     "Dance-drama",
+     "Carnatic music ensemble"
+    ],
+    [
+     "Manipuri",
+     "Manipur",
+     "Northeast India",
+     "Temple/ritual dance",
+     "Ensemble comprising Pung Cholom, flutes, trumpets, Tambura, Pena, and cymbals"
+    ],
+    [
+     "Mohiniattam",
+     "Kerala",
+     "South India",
+     "Dance-drama",
+     "Carnatic ensemble"
+    ],
+    [
+     "Odissi",
+     "Odisha",
+     "East India",
+     "Temple dance",
+     "Ensemble of Hindustani music instruments: pakhavaj, sitar, flute, cymbals, harmonium"
+    ],
+    [
+     "Sattriya",
+     "Assam",
+     "Northeast India",
+     "Dance-drama",
+     "Borgeet accompanied by khol drums and cymbals."
+    ]
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Among 20th-century directions is the modern dance of Uday Shankar in which classical styles were employed but not adhered to rigidly."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Kathakali",
+    "Kerala",
+    "dance"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Bharatanatyam",
+    "Tamil",
+    "dance"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "influences",
+    "absorbed",
+    "northern"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Clothing"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "literacy",
+    "Tamil",
+    "Women"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "In the last 50 years, fashion in India has changed a great deal."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Varanasi",
+    "woollen",
+    "dhoti"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "lower-body",
+    "tourists",
+    "Manipur"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "shalwar-kameez",
+    "Puducherry",
+    "Women"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Cuisine"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "The diversity of Indian food served worldwide has been partially concealed by the dominance of Punjabi cuisine."
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "vegetarian",
+    "platter",
+    "Indian"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Bangladesh",
+    "Machher",
+    "eastern"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "national",
+    "months",
+    "summer"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Sports"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "consecutive",
+    "captained",
+    "Olympics"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "batsman",
+    "century",
+    "August"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Dommaraju",
+    "champion",
+    "reigning"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Badminton",
+    "Olympics",
+    "Janeiro"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "felicitating",
+    "Olympics",
+    "athlete"
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "See also"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Notes"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "References"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Bibliography"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Overview"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Etymology"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "History"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Geography"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Politics"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Economy"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Demographics"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Culture"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "External links"
+  }
+ ]
+}

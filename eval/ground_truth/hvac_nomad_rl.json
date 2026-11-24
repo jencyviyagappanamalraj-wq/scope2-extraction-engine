@@ -1,0 +1,203 @@
+{
+ "doc": "Paper1.pdf",
+ "elements": [
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Generalizing HVAC Control With Domain Randomized Reinforcement Learning"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Abstract"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "CCS Concepts"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Keywords"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "1 Introduction"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "2 Method"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "2.1 Thermal zone modeling"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "2.2 Reinforcement learning controller"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "2.3 Domain randomization for RL training"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "2.4 Training configuration"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "3 Results and evaluation of NOMAD-RL"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "3.1 Single-zone setting"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "3.2 Multi-zone setting"
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "text": "4 Conclusion"
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "text": "References"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "ACM ISBN",
+   "value": "979-8-4007-2199-1/2026/06"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Keywords",
+   "value": "HVAC, Reinforcement learning, Control, Domain randomization"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "This work is licensed under a",
+   "value": "Creative Commons Attribution 4.0 International License"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Model Predictive Control (MPC) remains the reference approach because it can explicitly balance comfort and energy use under operational constraints."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Experiments in both single-zone and multi-zone settings show that NOMAD-RL consistently outperforms constant-setpoint and non-randomized RL baselines, while approaching the performance of a well-tuned MPC."
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "text": "The model is implemented in JAX to support efficient simulation and automatic differentiation."
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "text": "We train the controller with Recurrent PPO, using the standard actor–critic implementation from the SB3-Contrib library."
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "text": "This utility yields the Boltzmann weights, i.e., the analytical solution of the associated expectation-maximization problem:"
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "text": "NOMAD-RL reduces cost by 70.4% relative to PID, but is 8.7% more costly than recurrent PPO on the nominal zone."
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "text": "NOMAD-RL remains effective in this more challenging setting: it reduces cost by 67.9% relative to constant-setpoint PID and is 14.5% more costly than MPC."
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "text": "Future work will focus on improving performance and real-world readiness through further training, hyperparameter tuning, expansion of the simulator and dataset pipeline, and validation on real buildings."
+  },
+  {
+   "type": "formula",
+   "page": 3,
+   "latex": "U(\\xi) = J_\\theta(\\xi) - \\lambda_{phys} C_P(\\xi) + \\lambda_{sur}(-\\log p_\\phi(\\xi))",
+   "alternatives": [
+    "U(ξ) = Jθ(ξ) − λphys CP(ξ) + λsur(− log pϕ(ξ))"
+   ]
+  },
+  {
+   "type": "formula",
+   "page": 3,
+   "latex": "w_i = \\mathrm{softmax}\\left(\\frac{U(\\xi_i)}{\\tau}\\right)_i",
+   "alternatives": [
+    "wi = softmax(U(ξi)/τ)i",
+    "w_i = softmax(U(xi_i)/tau)_i"
+   ]
+  },
+  {
+   "type": "formula",
+   "page": 3,
+   "latex": "\\min_\\phi L(\\phi) = -\\sum_{i=1}^{N} w_i \\log p_\\phi(\\xi_i) + \\beta D_{KL}(p_\\phi \\| p_{\\phi_{old}})",
+   "alternatives": [
+    "min L(ϕ) = − Σ wi log pϕ(ξi) + βDKL(pϕ ∥ pϕold)"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 2,
+   "caption_keywords": [
+    "architecture",
+    "NOMAD-RL"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 3,
+   "caption_keywords": [
+    "parameter-flow",
+    "distribution"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "caption_keywords": [
+    "behavior",
+    "training"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "caption_keywords": [
+    "recurrent",
+    "nominal"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "caption_keywords": [
+    "MPC",
+    "sampled"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,286 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Scope 2 extraction service (serverless): API Gateway -> scope2-api Lambda -> SQS -> scope2-worker Lambda
+  (rules engine + pypdf, MarkItDown, Docling*, Azure DI, Textract + Bedrock repair / check / judge),
+  DynamoDB for jobs, keys and usage, S3 for files. Creates NO IAM resources: both functions use the existing role
+  given by the trainer (scope2-service-lambda-exec). Names follow that role's rules:
+  tables/bucket/queues start with scope2-service-roles-, functions with scope2-.
+  (*Docling only with the container worker: WithDocling=true)
+
+Parameters:
+  LambdaRoleArn:
+    Type: String
+    Default: arn:aws:iam::330829569422:role/scope2-service-lambda-exec
+  BedrockModelId:
+    Type: String
+    Description: Claude Sonnet 4.6 model / inference profile ID (deploy.sh finds it)
+  BedrockRegion:
+    Type: String
+    Default: us-east-1
+  PriceInPer1K:
+    Type: String
+    Default: '0.003'
+  PriceOutPer1K:
+    Type: String
+    Default: '0.015'
+  AzureEndpoint:
+    Type: String
+    Default: ''
+  AzureKey:
+    Type: String
+    Default: ''
+    NoEcho: true
+  AzureChunkPages:
+    Type: String
+    Default: '2'
+    Description: 2 for the free F0 tier (2 pages per request), 0 for paid S0 (whole file in one request)
+  WitnessesStandard:
+    Type: String
+    Default: pypdf,markitdown
+  WitnessesAccurate:
+    Type: String
+    Default: pypdf,markitdown,azure,textract
+  WithDocling:
+    Type: String
+    Default: 'false'
+    AllowedValues: ['true', 'false']
+  WorkerImageUri:
+    Type: String
+    Default: ''
+    Description: ECR image of the Docling worker (deploy.sh sets it when WithDocling=true)
+  WorkerMemory:
+    Type: Number
+    Default: 3008
+
+Conditions:
+  Docling: !Equals [!Ref WithDocling, 'true']
+  NoDocling: !Not [!Condition Docling]
+
+Globals:
+  Function:
+    Environment:
+      Variables:
+        JOBS_TABLE: !Ref JobsTable
+        KEYS_TABLE: !Ref KeysTable
+        BUCKET_NAME: !Ref FilesBucket
+        QUEUE_URL: !Ref JobsQueue
+
+Resources:
+  JobsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: scope2-service-roles-jobs
+      BillingMode: PAY_PER_REQUEST
+      SSESpecification: {SSEEnabled: true}
+      AttributeDefinitions:
+        - {AttributeName: job_id, AttributeType: S}
+        - {AttributeName: owner, AttributeType: S}
+        - {AttributeName: created_at, AttributeType: N}
+      KeySchema:
+        - {AttributeName: job_id, KeyType: HASH}
+      GlobalSecondaryIndexes:
+        - IndexName: OwnerIndex
+          KeySchema:
+            - {AttributeName: owner, KeyType: HASH}
+            - {AttributeName: created_at, KeyType: RANGE}
+          Projection: {ProjectionType: ALL}
+
+  KeysTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: scope2-service-roles-keys
+      BillingMode: PAY_PER_REQUEST
+      SSESpecification: {SSEEnabled: true}
+      AttributeDefinitions:
+        - {AttributeName: key_hash, AttributeType: S}
+      KeySchema:
+        - {AttributeName: key_hash, KeyType: HASH}
+
+  FilesBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub scope2-service-roles-files-${AWS::AccountId}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - {Id: expire-files, Status: Enabled, ExpirationInDays: 7}
+      CorsConfiguration:
+        CorsRules:
+          - {AllowedMethods: [PUT, GET], AllowedOrigins: ['*'], AllowedHeaders: ['*'], MaxAge: 3000}
+
+  JobsDLQ:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: scope2-service-roles-jobs-dlq
+      SqsManagedSseEnabled: true
+      MessageRetentionPeriod: 1209600
+
+  JobsQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: scope2-service-roles-jobs
+      SqsManagedSseEnabled: true
+      VisibilityTimeout: 960            # longer than the worker timeout (900 s)
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt JobsDLQ.Arn
+        maxReceiveCount: 2
+
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: scope2-api
+      Role: !Ref LambdaRoleArn
+      Runtime: python3.13
+      CodeUri: build/api/
+      Handler: api_handler.handler
+      MemorySize: 512
+      Timeout: 29
+      Events:
+        All:
+          Type: HttpApi
+          Properties: {ApiId: !Ref HttpApi, Path: "/{proxy+}", Method: ANY}
+        Root:
+          Type: HttpApi
+          Properties: {ApiId: !Ref HttpApi, Path: /, Method: GET}
+
+  WorkerFunction:
+    Type: AWS::Serverless::Function
+    Condition: NoDocling
+    Properties:
+      FunctionName: scope2-worker
+      Role: !Ref LambdaRoleArn
+      Runtime: python3.13
+      CodeUri: build/worker/
+      Handler: worker_handler.handler
+      Timeout: 900
+      MemorySize: !Ref WorkerMemory
+      EphemeralStorage: {Size: 2048}
+      Environment:
+        Variables:
+          JOBS_TABLE: !Ref JobsTable
+          KEYS_TABLE: !Ref KeysTable
+          BUCKET_NAME: !Ref FilesBucket
+          QUEUE_URL: !Ref JobsQueue
+          AI_PROVIDER: bedrock
+          BEDROCK_MODEL_ID: !Ref BedrockModelId
+          BEDROCK_REGION: !Ref BedrockRegion
+          PRICE_IN_PER_1K: !Ref PriceInPer1K
+          PRICE_OUT_PER_1K: !Ref PriceOutPer1K
+          AI_PRICE_IN_PER_1K: !Ref PriceInPer1K
+          AI_PRICE_OUT_PER_1K: !Ref PriceOutPer1K
+          AI_CACHE_DIR: /tmp/ai-cache
+          AI_PARALLEL: '3'
+          AZURE_DI_ENDPOINT: !Ref AzureEndpoint
+          AZURE_DI_KEY: !Ref AzureKey          # encrypted at rest by Lambda (AWS-managed key)
+          AZURE_CHUNK_PAGES: !Ref AzureChunkPages
+          AZURE_USD_PER_PAGE: '0.01'
+          TEXTRACT_USD_PER_PAGE: '0.019'
+          WITNESSES_STANDARD: !Ref WitnessesStandard
+          WITNESSES_ACCURATE: !Ref WitnessesAccurate
+          JOB_BUDGET_SECONDS: '780'
+          COMPUTE_USD_PER_SECOND: '0.000049'
+          MPLCONFIGDIR: /tmp
+          HOME: /tmp
+      Events:
+        Jobs:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt JobsQueue.Arn
+            BatchSize: 1
+            ScalingConfig: {MaximumConcurrency: 3}
+
+  WorkerImageFunction:
+    Type: AWS::Serverless::Function
+    Condition: Docling
+    Properties:
+      FunctionName: scope2-worker
+      Role: !Ref LambdaRoleArn
+      PackageType: Image
+      ImageUri: !Ref WorkerImageUri
+      Timeout: 900
+      MemorySize: !Ref WorkerMemory
+      EphemeralStorage: {Size: 4096}
+      Environment:
+        Variables:
+          JOBS_TABLE: !Ref JobsTable
+          KEYS_TABLE: !Ref KeysTable
+          BUCKET_NAME: !Ref FilesBucket
+          QUEUE_URL: !Ref JobsQueue
+          AI_PROVIDER: bedrock
+          BEDROCK_MODEL_ID: !Ref BedrockModelId
+          BEDROCK_REGION: !Ref BedrockRegion
+          PRICE_IN_PER_1K: !Ref PriceInPer1K
+          PRICE_OUT_PER_1K: !Ref PriceOutPer1K
+          AI_PRICE_IN_PER_1K: !Ref PriceInPer1K
+          AI_PRICE_OUT_PER_1K: !Ref PriceOutPer1K
+          AI_CACHE_DIR: /tmp/ai-cache
+          AI_PARALLEL: '3'
+          AZURE_DI_ENDPOINT: !Ref AzureEndpoint
+          AZURE_DI_KEY: !Ref AzureKey          # encrypted at rest by Lambda (AWS-managed key)
+          AZURE_CHUNK_PAGES: !Ref AzureChunkPages
+          AZURE_USD_PER_PAGE: '0.01'
+          TEXTRACT_USD_PER_PAGE: '0.019'
+          WITNESSES_STANDARD: !Ref WitnessesStandard
+          WITNESSES_ACCURATE: !Ref WitnessesAccurate
+          JOB_BUDGET_SECONDS: '780'
+          COMPUTE_USD_PER_SECOND: '0.000049'
+          MPLCONFIGDIR: /tmp
+          DOCLING_ARTIFACTS_PATH: /opt/docling-models
+          HF_HUB_OFFLINE: '1'
+          HOME: /tmp
+      Events:
+        Jobs:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt JobsQueue.Arn
+            BatchSize: 1
+            ScalingConfig: {MaximumConcurrency: 3}
+
+  DlqAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: scope2-service-roles-dlq-not-empty
+      AlarmDescription: A job failed twice and landed in the dead-letter queue
+      Namespace: AWS/SQS
+      MetricName: ApproximateNumberOfMessagesVisible
+      Dimensions: [{Name: QueueName, Value: !GetAtt JobsDLQ.QueueName}]
+      Statistic: Maximum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 0
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+  WorkerErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: scope2-service-roles-worker-errors
+      AlarmDescription: The worker Lambda raised errors (crash or 15-minute timeout)
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions: [{Name: FunctionName, Value: scope2-worker}]
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 0
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+
+Outputs:
+  ApiUrl:
+    Value: !Sub https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com
+  BucketName:
+    Value: !Ref FilesBucket
+  KeysTable:
+    Value: !Ref KeysTable

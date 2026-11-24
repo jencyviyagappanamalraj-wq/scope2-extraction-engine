@@ -1,0 +1,266 @@
+{
+ "doc": "Paper2.pdf",
+ "elements": [
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "The Challenges of PROTAC Permeability Prediction"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Abstract"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "1 Introduction"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "2 Background"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "Permeability prediction for degraders"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "Agentic extraction of assay data"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "3 Methods"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "3.1 Data"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "Original dataset"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "text": "New dataset"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "3.2 Model training and evaluation"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "4 Results"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "text": "Agentic data extraction"
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "text": "Permeability modeling"
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "text": "5 Discussion"
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "text": "Performance on PROTAC-DB 3.0 does not transfer"
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "text": "The public record is organized by publication, not by chemistry"
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "text": "Ranking vs. absolute prediction"
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "text": "Transferring curation workflows across endpoint classes"
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "text": "5.1 Limitations and future work"
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "text": "6 Conclusion"
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "text": "Author contributions"
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "text": "Acknowledgments and disclosure of funding"
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "text": "Software and data availability"
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "text": "References"
+  },
+  {
+   "type": "key_value",
+   "page": 6,
+   "key": "Data and code are available at",
+   "value": "https://github.com/xhudec2/protac-permeability"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Cell permeability is a key bottleneck for PROTAC development, and public data available to model it is scarce and inconsistent."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "The largest public resource, PROTAC-DB 3.0 [3], contains just 31 PROTACs with PAMPA measurements."
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "text": "That workflow targets the pharmacodynamic axis of degradation, however, and doesn’t cover ADME properties."
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "text": "Alpha is set to 1.0 for all models."
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "text": "We believe a model trained on PROTAC-DB data does not generalize to the newly-extracted data because PROTAC-DB spans a narrow region of degrader chemistry that the extracted set includes."
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "text": "Predictive models for new modalities depend on high-quality published data, and for PROTAC permeability we are not there yet."
+  },
+  {
+   "type": "table",
+   "page": 4,
+   "cells": [
+    [
+     "Method",
+     "Evaluation data",
+     "Spearman ρ ↑",
+     "RMSE ↓",
+     "R² ↑"
+    ],
+    [
+     "Ridge (PROTAC-DB 3.0)",
+     "PROTAC-DB 3.0",
+     "0.82 (0.06)",
+     "0.67 (0.08)",
+     "0.67 (0.08)"
+    ],
+    [
+     "Ridge (New)",
+     "PROTAC-DB 3.0",
+     "0.80 (0.02)",
+     "1.07 (0.04)",
+     "0.18 (0.06)"
+    ],
+    [
+     "Ridge (All)",
+     "PROTAC-DB 3.0",
+     "0.82 (0.03)",
+     "0.82 (0.07)",
+     "0.51 (0.08)"
+    ],
+    [
+     "Ridge (PROTAC-DB 3.0)",
+     "New data",
+     "0.12 (0.03)",
+     "1.96 (0.03)",
+     "-0.88 (0.06)"
+    ],
+    [
+     "Ridge (New)",
+     "New data",
+     "0.30 (0.09)",
+     "1.47 (0.05)",
+     "-0.07 (0.08)"
+    ],
+    [
+     "Ridge (All)",
+     "New data",
+     "0.33 (0.06)",
+     "1.40 (0.04)",
+     "0.04 (0.05)"
+    ],
+    [
+     "Ridge (PROTAC-DB 3.0)",
+     "All data",
+     "0.36 (0.03)",
+     "1.64 (0.03)",
+     "-0.34 (0.05)"
+    ],
+    [
+     "Ridge (New)",
+     "All data",
+     "0.50 (0.05)",
+     "1.35 (0.04)",
+     "0.09 (0.05)"
+    ],
+    [
+     "Ridge (All)",
+     "All data",
+     "0.53 (0.04)",
+     "1.23 (0.04)",
+     "0.24 (0.05)"
+    ]
+   ]
+  },
+  {
+   "type": "image",
+   "page": 2,
+   "caption_keywords": [
+    "extraction",
+    "pipeline"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 3,
+   "caption_keywords": [
+    "distribution",
+    "comparison"
+   ]
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "caption_keywords": [
+    "parity",
+    "plots"
+   ]
+  }
+ ]
+}

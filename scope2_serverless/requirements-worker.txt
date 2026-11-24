@@ -1,0 +1,6 @@
+# Worker Lambda (zip, max 250 MB unzipped: these come to ~184 MB). boto3 is provided by the Lambda runtime.
+pdfplumber==0.11.10
+pypdf==6.17.0
+requests==2.34.2
+beautifulsoup4==4.15.0
+markitdown[pdf]==0.1.7

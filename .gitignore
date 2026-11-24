@@ -1,0 +1,44 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Big or generated files - never commit these
+*.pdf
+data/
+output/
+models/
+.aws-sam/
+samconfig.toml
+.cache/
+*.zip
+
+# Evaluation inputs you keep locally (commit only small examples)
+eval/outputs/*
+!eval/outputs/.gitkeep
+
+# deploy bundle for CloudShell
+*.tgz
+
+# more secrets and local-only folders
+*.env
+settings.env
+_archive_old_versions/
+tool_per_element/out*/
+scope2_serverless/scripts/textract_out/
+
+# old / scratch material that is not part of the submission
+eval/ground_truth_old/
+eval/__pycache__/
+scope2_serverless/business_case_out/
+ai_evidence.md
+*.PNG
+*.png
+!scope2_serverless/docs/**/*.png
+
+# keep the live accurate outputs: they are the AI evidence and cannot be re-created without AWS
+!eval/outputs/engine_accurate/

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Extraction Engine</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+:root{--bg:#fff;--fg:#1d1d1f;--mut:#6b7280;--line:#e5e7eb;--card:#f8fafc;--low:#fef3c7;--lowb:#d97706;--vlow:#fee2e2;--vlowb:#dc2626;--acc:#2563eb}
+@media(prefers-color-scheme:dark){:root{--bg:#111318;--fg:#e8e8ea;--mut:#9aa0aa;--line:#2a2f39;--card:#181b22;--low:#3b2f0b;--lowb:#f59e0b;--vlow:#3f1515;--vlowb:#f87171;--acc:#60a5fa}}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header{padding:12px 20px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+h1{font-size:16px;margin:0}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input,select,button{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
+button{cursor:pointer}button.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.panel{padding:12px 20px;border-bottom:1px solid var(--line)}.mut{color:var(--mut)}
+#split{display:none;grid-template-columns:1fr 1fr;height:calc(100vh - 230px);min-height:420px}
+#src,#out{overflow:auto;border-right:1px solid var(--line)}#src iframe{width:100%;height:100%;border:0}
+.pg{position:relative;margin:8px auto;box-shadow:0 0 0 1px var(--line)}.pg canvas{display:block;width:100%}
+.hl{position:absolute;border:2px solid #f59e0b;background:rgba(250,204,21,.25);border-radius:2px;pointer-events:none}#out{padding:12px 16px}
+.el{padding:6px 10px;margin:6px 0;border-left:4px solid transparent;border-radius:4px;cursor:pointer}
+.el:hover{background:var(--card)}.el.low{background:var(--low);border-left-color:var(--lowb)}.el.vlow{background:var(--vlow);border-left-color:var(--vlowb)}
+.badge{font-size:11px;color:var(--mut);float:right;margin-left:8px}
+table.md{border-collapse:collapse;font-size:13px}table.md td,table.md th{border:1px solid var(--line);padding:3px 8px}
+pre{white-space:pre-wrap;margin:0;font:12px monospace}
+.chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;margin:0 4px 2px 0;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.chip.g{border-color:#16a34a;color:#15803d}.chip.a{border-color:var(--lowb);color:var(--lowb)}.chip.r{border-color:var(--vlowb);color:var(--vlowb)}.chip.b{border-color:var(--acc);color:var(--acc)}
+.ev{display:none;margin:6px 0 2px;padding:8px 10px;border:1px dashed var(--line);border-radius:6px;font-size:12px;cursor:default}.el.open .ev{display:block}
+.bar{display:inline-block;height:8px;background:var(--acc);border-radius:4px;vertical-align:middle;margin:0 6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-top:10px}.card{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--card)}
+.card h3{font-size:13px;margin:0 0 6px}.legend span{margin-right:10px;white-space:nowrap}.orig{display:none;margin-top:6px;padding:6px;border-left:3px solid var(--line);color:var(--mut)}.el.showorig .orig{display:block}table.u{border-collapse:collapse;width:100%}table.u td,table.u th{border-bottom:1px solid var(--line);padding:4px 8px;text-align:left}
+.algo{border-top:2px solid #333;border-bottom:2px solid #333;padding:4px 8px;font-size:14px;line-height:1.6}.algo-h{border-bottom:1px solid #333;margin-bottom:3px}
+</style></head><body>
+<header><h1>Extraction Engine</h1>
+ <div class="row"><input id="key" size="34" placeholder="API key (ek_...)"><button id="getkey">Get a free key</button><button id="usage">My usage</button></div></header>
+<div class="panel"><div class="row">
+ <input type="file" id="file" accept="application/pdf"> <span class="mut">or</span> <input id="url" size="36" placeholder="https://example.com/page-or.pdf">
+ <select id="level"><option value="standard">standard: rules + pypdf, MarkItDown witnesses (no AI)</option><option value="accurate">accurate: + Textract (and Docling / Azure DI when configured), AI repair, AI check, AI judge</option></select>
+ <button class="p" id="go">Extract</button><span id="status" class="mut"></span></div><div id="usagebox" style="margin-top:10px"></div></div>
+<div class="panel" id="bar" style="display:none"><div class="row"><span id="summary"></span>
+ <label>Highlight confidence below <input type="range" id="thr" min="0.3" max="1" step="0.05" value="0.8"> <b id="thrv">0.80</b></label>
+ <button id="dlzip">Download Markdown + images (zip)</button><button id="dlmd">Download Markdown</button><button id="dljson">Download JSON</button>
+ <span class="mut">Click an element: its place is highlighted on the page and its evidence opens.</span></div>
+ <div id="toolsbox"></div></div>
+<div id="split"><div id="src"></div><div id="out"></div></div>
+<script>
+const $=id=>document.getElementById(id);let srcUrl="",data=null,jobId="",imgs={};
+$("key").value=localStorage.getItem("ek")||"";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function api(path,opt={}){const r=await fetch(path,{...opt,headers:{"x-api-key":$("key").value.trim(),"content-type":"application/json",...(opt.headers||{})}});
+ const t=await r.text();let j;try{j=JSON.parse(t)}catch{j=t}if(!r.ok)throw new Error(j.error||t);return j}
+$("getkey").onclick=async()=>{const email=prompt("Your email:");if(!email)return;
+ try{const r=await api("/v1/keys",{method:"POST",body:JSON.stringify({email})});$("key").value=r.api_key;localStorage.setItem("ek",r.api_key);
+ alert("Key created and saved in this browser. Copy it somewhere safe: it cannot be shown again.")}catch(e){alert(e.message)}};
+$("key").onchange=()=>localStorage.setItem("ek",$("key").value.trim());
+$("usage").onclick=async()=>{try{const u=await api("/v1/usage");
+ $("usagebox").innerHTML=`${u.jobs} jobs (${u.done} done), ${u.pages} pages, ${u.ai_calls} AI calls, total <b>$${Number(u.cost_usd).toFixed(5)}</b>
+ <table class="u"><tr><th>job</th><th>level</th><th>status</th><th>pages</th><th>cost USD</th></tr>`+
+ (u.recent_jobs||[]).map(j=>`<tr><td>${j.job_id}</td><td>${j.quality}</td><td>${j.status}</td><td>${j.pages??""}</td><td>${j.cost_usd!=null?Number(j.cost_usd).toFixed(5):""}</td></tr>`).join("")+"</table>"}catch(e){alert(e.message)}};
+$("go").onclick=async()=>{const f=$("file").files[0],u=$("url").value.trim(),quality=$("level").value;
+ if(!f&&!u)return alert("Choose a PDF or enter a URL.");$("go").disabled=true;$("split").style.display=$("bar").style.display="none";
+ try{let job;$("status").textContent="submitting...";
+  if(u&&!f){job=await api("/v1/jobs",{method:"POST",body:JSON.stringify({url:u,quality})});srcUrl=u}
+  else{srcUrl=URL.createObjectURL(f);
+   job=await api("/v1/jobs",{method:"POST",body:JSON.stringify({filename:f.name,quality})});
+   const p=await fetch(job.upload_url,{method:"PUT",headers:job.upload_headers,body:f});if(!p.ok)throw new Error("upload failed");
+   job=await api(`/v1/jobs/${job.job_id}/start`,{method:"POST"})}
+  jobId=job.job_id;
+  while(true){await new Promise(r=>setTimeout(r,3000));job=await api("/v1/jobs/"+jobId);$("status").textContent=job.status+"...";
+   if(job.status==="done")break;if(job.status==="failed")throw new Error(job.error||"failed")}
+  data=await api(`/v1/jobs/${jobId}/result?format=json&inline=1`);
+  try{imgs=(await api(`/v1/jobs/${jobId}/images`)).images||{}}catch{imgs={}}
+  show(job)}catch(e){$("status").textContent="Error: "+e.message}
+ $("go").disabled=false};
+const FLAG={ai_repaired:["Rewritten by AI","b"],qc_pass:["AI check passed","g"],qc_fail:["AI check failed","r"],
+ inline_math:["Inline math","b"],low_agreement:["Tools disagree","a"],needs_review:["Please review","r"],
+ replaced_by_consensus:["Table chosen by tool vote","b"],ocr:["Read by OCR (scanned page)","a"],ai_rejected:["AI answer rejected","a"]};
+function chips(e){const f=e.flags||[];let h=f.filter(x=>FLAG[x]).map(x=>`<span class="chip ${FLAG[x][1]}">${FLAG[x][0]}</span>`).join("");
+ if((f.includes("inline_math")||e.type==="algorithm")&&!f.includes("ai_repaired"))h+=`<span class="chip a">Math symbols may be incomplete: use accurate</span>`;return h}
+function render(e){const c=e.content_markdown;
+ if(e.type==="formula"){const tex=c.replace(/^\s*\$\$|\$\$\s*$/g,"").trim();const d=document.createElement("div");
+  try{if(window.katex){katex.render(tex,d,{displayMode:true,throwOnError:true});return d.outerHTML}}catch{}return `<pre>${esc(c)}</pre>`}
+ if(e.type==="table"||/^\|/.test(c)){const rows=c.trim().split("\n").filter(l=>!/^\|?\s*:?-{2,}/.test(l));
+  return `<table class="md">`+rows.map((r,i)=>"<tr>"+r.replace(/^\||\|$/g,"").split("|").map(x=>`<${i?"td":"th"}>${esc(x.trim())}</${i?"td":"th"}>`).join("")+"</tr>").join("")+"</table>"}
+ if(e.type==="algorithm")return `<div class="algo">`+c.split(/\s*\n/).map((l,i)=>`<div${i?"":' class="algo-h"'}>${mathBold(l,(e.flags||[]).includes("ai_repaired"))}</div>`).join("")+`</div>`;
+ if(e.type==="image"){const cap=esc(c.replace(/!\[[^\]]*\]\([^)]*\)/g,"").trim()).replace(/\n/g,"<br>");
+  return (e.image_file&&imgs[e.image_file]?`<img src="${imgs[e.image_file]}" alt="${esc(e.image_file)}" style="max-width:100%;max-height:320px;display:block;margin:4px 0">`:`<span class="chip">figure</span> `)+cap}
+ if(e.type==="text"&&/\$[^$\n]+\$/.test(c)&&(e.flags||[]).includes("ai_repaired"))return mathBold(c,true);
+ const h=c.match(/^(#{1,6})\s+(.*)/);if(h)return `<h${h[1].length} style="margin:4px 0">${esc(h[2])}</h${h[1].length}>`;
+ return esc(c).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\n/g,"<br>")}
+function mathBold(l,tex){return (tex?inlineMath(l):esc(l)).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")}
+function inlineMath(c){return c.split(/(\$[^$\n]+\$)/).map(p=>{if(/^\$[^$]+\$$/.test(p)&&window.katex){
+  try{return katex.renderToString(p.slice(1,-1),{throwOnError:true})}catch{}}return esc(p)}).join("").replace(/\n/g,"<br>")}
+const pct=v=>v==null?"n/a":Math.round(v*100)+"%";
+function evidence(e){const ev=e.evidence||{};let h="";
+ const sup=ev.tool_support||{};const ks=Object.keys(sup);
+ h+=`<div><b>Tool agreement</b> ${ev.agreement==null?"<span class='mut'>(no other tool reads this kind of element on this page)</span>":pct(ev.agreement)}</div>`;
+ h+=ks.map(k=>`<div>${esc(k)}<span class="bar" style="width:${Math.round(sup[k]*120)}px"></span>${pct(sup[k])}</div>`).join("");
+ if(ev.judge)h+=`<div style="margin-top:4px"><b>AI judge</b> ${pct(ev.judge.score)}${ev.judge.issue?" · "+esc(ev.judge.issue):" · no issue found"}</div>`;
+ if(e.qc_issues)h+=`<div><b>AI check found</b> ${esc(e.qc_issues.join("; "))}</div>`;
+ if(e.qc_error)h+=`<div class="mut">AI check not run: ${esc(e.qc_error)}</div>`;
+ const ch=ev.checks||{};if(Object.keys(ch).length)h+=`<div style="margin-top:4px"><b>Checks</b> `+Object.entries(ch).map(([k,v])=>`${v?"✓":"✗"} ${esc(k.replace(/_/g," "))}`).join(" · ")+`</div>`;
+ const sg=ev.signals||{},w=ev.weights||{};if(Object.keys(sg).length)h+=`<div style="margin-top:4px"><b>Score</b> = `+
+  Object.keys(sg).map(k=>`${esc(k)} ${pct(sg[k])} × ${w[k]}`).join(" + ")+` = <b>${e.confidence}</b>${(ev.failed_checks||[]).length?" (capped: failed check)":""}</div>`;
+ if(e.rules_text)h+=`<div style="margin-top:4px"><a href="#" onclick="event.stopPropagation();this.closest('.el').classList.toggle('showorig');return false">show / hide the original text</a></div><div class="orig">${esc(e.rules_text)}</div>`;
+ if(e.engine_markdown)h+=`<div class="mut" style="margin-top:4px">Our rules' own table was replaced because the other tools agreed more with ${esc(e.method)}.</div>`;
+ return h}
+function toolsPanel(r){const ts=r.tool_scores||{},ws=r.witnesses||[];if(!ws.length)return "";
+ let h=`<div class="cards"><div class="card"><h3>How each tool read this document</h3><table class="u"><tr><th>tool</th><th>agreement with the others (F1)</th><th>precision</th><th>recall</th></tr>`+
+  Object.entries(ts).map(([k,v])=>`<tr><td>${k==="engine"?"<b>our final output</b>":esc(k)}</td><td>${pct(v.f1)}</td><td>${pct(v.precision)}</td><td>${pct(v.recall)}</td></tr>`).join("")+`</table>
+  <div class="mut" style="margin-top:6px">Each tool is compared with what the majority of the other tools read. No answer key is used.</div>`+
+  ws.filter(w=>w.status!=="ok").map(w=>`<div class="mut">${esc(w.tool)}: ${esc(w.status)}${w.error?" ("+esc(w.error.slice(0,90))+")":""}</div>`).join("")+`</div>`;
+ const miss=(r.coverage_by_page||[]).flatMap(c=>c.possibly_missing.map(m=>`p.${c.page}: ${esc(m)}`));
+ h+=`<div class="card"><h3>Completeness and review</h3><div>Coverage: <b>${pct(r.coverage_mean)}</b> of the text the tools agree is on the pages is in our output</div>
+  <div>Elements to review: <b>${r.needs_review??0}</b> · tools disagree: <b>${r.low_agreement_elements??0}</b>${r.judge_mean_score!=null?` · AI judge average: <b>${pct(r.judge_mean_score)}</b>`:""}</div>`+
+  (miss.length?`<div style="margin-top:6px"><b>Possibly missing</b> (seen by the tools, not in our output):<br>${miss.slice(0,6).join("<br>")}</div>`:"")+
+  ((r.scanned_pages_filled||[]).length?`<div>Scanned pages read by OCR: ${r.scanned_pages_filled.map(x=>"p."+x.page+" ("+x.tool+")").join(", ")}</div>`:"")+`</div>
+ <div class="card legend"><h3>What the colours and badges mean</h3><div>Background: <span style="background:var(--vlow)">&nbsp;red&nbsp;</span> very low · <span style="background:var(--low)">&nbsp;amber&nbsp;</span> below your threshold · none = fine</div>
+  <div style="margin-top:4px">`+Object.values(FLAG).map(([t,c])=>`<span class="chip ${c}">${t}</span>`).join("")+`</div>
+  <div class="mut" style="margin-top:4px">Score = AI judge (45%) + tool agreement (35%) + method (20%), using the signals that exist; a failed check caps it. Inline math is written as LaTeX and shown rendered. Figures are saved as separate image files, linked from the Markdown.</div></div></div>`;
+ return h}
+function paint(){const t=parseFloat($("thr").value);$("thrv").textContent=t.toFixed(2);
+ document.querySelectorAll(".el").forEach(d=>{const c=parseFloat(d.dataset.c);d.classList.remove("low","vlow");if(c<t-0.3)d.classList.add("vlow");else if(c<t)d.classList.add("low")})}
+function show(job){const r=data.report||job.report||{};$("status").textContent="done";$("bar").style.display="block";$("split").style.display="grid";
+ const jr=job.report||{};
+ $("summary").innerHTML=`<b>${job.quality}</b> · ${jr.pages||1} pages · confidence <b>${jr.document_confidence??"?"}</b> · cost <b>$${Number(jr.cost_usd||0).toFixed(5)}</b> (AI $${Number(jr.ai_cost_usd||0).toFixed(5)}${jr.ai_applied?"":", no AI used"})`;
+ $("toolsbox").innerHTML=toolsPanel(r);
+ showSource(job.source_url,(data.report||{}).page_sizes||[]);
+ $("out").innerHTML=data.elements.map((e,i)=>`<div class="el" data-c="${e.confidence}" data-p="${e.page||1}" data-i="${i}">
+  <span class="badge">p.${e.page||1} · ${e.type} · <b>${e.confidence}</b> · ${esc(e.method||"")}</span>${chips(e)}<div>${render(e)}</div><div class="ev">${evidence(e)}</div></div>`).join("");
+ document.querySelectorAll(".el").forEach(d=>d.onclick=ev=>{if(ev.target.closest(".ev"))return;d.classList.toggle("open");highlight(data.elements[+d.dataset.i])});paint()}
+// the source on the left: PDFs are drawn page by page with pdf.js so the clicked element can be highlighted;
+// web pages (and PDFs pdf.js cannot open) are shown in a normal frame
+let pages=[],sizes=[],useFrame=false;
+function setSrc(p,remote){if(remote&&!srcUrl.startsWith("blob:")&&!srcUrl.startsWith("http"))srcUrl=remote;
+ $("src").innerHTML=`<iframe src="${esc(srcUrl)}${srcUrl.startsWith("http")&&!/\.pdf/i.test(srcUrl)?"":"#page="+p}"></iframe>`}
+async function showSource(remote,pageSizes){
+ if(remote&&!srcUrl.startsWith("blob:")&&!srcUrl.startsWith("http"))srcUrl=remote;
+ const isPdf=srcUrl.startsWith("blob:")||/\.pdf(\?|$)/i.test(srcUrl)||(remote&&/\.pdf/i.test(remote));
+ pages=[];sizes=pageSizes;useFrame=!isPdf||!window.pdfjsLib;
+ if(useFrame){setSrc(1,remote);return}
+ try{pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const pdf=await pdfjsLib.getDocument(srcUrl.startsWith("blob:")||srcUrl.includes("amazonaws.com")?srcUrl:remote||srcUrl).promise;
+  const box=$("src");box.innerHTML="";const W=box.clientWidth-24;
+  for(let n=1;n<=pdf.numPages;n++){const pg=await pdf.getPage(n);const v1=pg.getViewport({scale:1});
+   const scale=Math.min(2,(W/v1.width)*(window.devicePixelRatio||1));const vp=pg.getViewport({scale});
+   const wrap=document.createElement("div");wrap.className="pg";wrap.style.width=W+"px";
+   const c=document.createElement("canvas");c.width=vp.width;c.height=vp.height;wrap.appendChild(c);box.appendChild(wrap);
+   await pg.render({canvasContext:c.getContext("2d"),viewport:vp}).promise;
+   pages[n]={wrap,w:(sizes[n-1]||[v1.width])[0]}}}
+ catch(err){console.warn("pdf.js could not open the source, showing it in a frame",err);useFrame=true;setSrc(1,remote)}}
+function highlight(e){if(useFrame){setSrc(e.page||1);return}
+ document.querySelectorAll(".hl").forEach(x=>x.remove());const p=pages[e.page||1];if(!p)return;
+ const k=p.wrap.clientWidth/p.w;let first=null;
+ for(const [x0,y0,x1,y1] of (e.boxes||(e.bbox?[e.bbox]:[]))){const h=document.createElement("div");h.className="hl";
+  Object.assign(h.style,{left:(x0*k-3)+"px",top:(y0*k-3)+"px",width:((x1-x0)*k+6)+"px",height:((y1-y0)*k+6)+"px"});
+  p.wrap.appendChild(h);first=first||h}
+ (first||p.wrap).scrollIntoView({behavior:"smooth",block:"center"})}
+$("thr").oninput=paint;
+const dl=(name,text,type)=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click()};
+$("dlzip").onclick=async()=>{const r=await api(`/v1/jobs/${jobId}/result?format=zip`);location.href=r.url};
+$("dljson").onclick=()=>dl("output.json",JSON.stringify(data,null,1),"application/json");
+$("dlmd").onclick=async()=>dl("output.md",await (await fetch(`/v1/jobs/${jobId}/result?format=markdown&inline=1`,{headers:{"x-api-key":$("key").value.trim()}})).text(),"text/markdown");
+</script></body></html>

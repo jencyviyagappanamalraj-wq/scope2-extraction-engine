@@ -1,0 +1,4066 @@
+{
+ "report": {
+  "source": "/tmp/tmpdmao9ft7/in.pdf",
+  "level": "accurate",
+  "engine_version": "v4-ensemble",
+  "elements": 79,
+  "images": [
+   "page2_figure_1.png",
+   "page3_figure_2.png",
+   "page4_figure_3.png",
+   "page4_figure_4.png",
+   "page4_figure_5.png"
+  ],
+  "inline_math_paragraphs": 7,
+  "witnesses": [
+   {
+    "tool": "pypdf",
+    "status": "ok",
+    "seconds": 1.13,
+    "pages": 4,
+    "error": ""
+   },
+   {
+    "tool": "markitdown",
+    "status": "ok",
+    "seconds": 3.12,
+    "pages": 4,
+    "error": ""
+   },
+   {
+    "tool": "textract",
+    "status": "ok",
+    "seconds": 10.64,
+    "pages": 4,
+    "error": ""
+   }
+  ],
+  "tool_scores": {
+   "pypdf": {
+    "precision": 0.922,
+    "recall": 0.955,
+    "f1": 0.938,
+    "pages": 4
+   },
+   "markitdown": {
+    "precision": 0.91,
+    "recall": 0.966,
+    "f1": 0.937,
+    "pages": 4
+   },
+   "engine": {
+    "precision": 0.961,
+    "recall": 0.913,
+    "f1": 0.937,
+    "pages": 4
+   },
+   "textract": {
+    "precision": 0.837,
+    "recall": 0.918,
+    "f1": 0.876,
+    "pages": 4
+   }
+  },
+  "coverage_mean": 0.916,
+  "coverage_by_page": [
+   {
+    "page": 1,
+    "coverage": 0.958,
+    "possibly_missing": [
+     "arXiv:2609.05822v1  [cs.LG]  5 Sep 2026"
+    ]
+   },
+   {
+    "page": 2,
+    "coverage": 0.843,
+    "possibly_missing": []
+   },
+   {
+    "page": 3,
+    "coverage": 0.89,
+    "possibly_missing": []
+   },
+   {
+    "page": 4,
+    "coverage": 0.975,
+    "possibly_missing": []
+   }
+  ],
+  "scanned_pages_filled": [],
+  "tables_replaced_by_consensus": 0,
+  "low_agreement_elements": 0,
+  "needs_review": 0,
+  "needs_ai_left": 0,
+  "text_disagree": 0,
+  "seconds_rules": 3.58,
+  "seconds_witnesses": 10.69,
+  "seconds_total": 25.96,
+  "budget_seconds": 780,
+  "scoring_weights": {
+   "judge": 0.45,
+   "agreement": 0.35,
+   "method": 0.2
+  },
+  "pages_total": 4,
+  "pages_processed": 4,
+  "page_sizes": [
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ]
+  ],
+  "ai_calls": 5,
+  "cache_hits": 12,
+  "errors": 0,
+  "ai_skipped_time_budget": 0,
+  "skipped_over_budget": 0,
+  "input_tokens": 14897,
+  "output_tokens": 2030,
+  "ai_seconds_total": 0,
+  "ai_cost_usd": 0.146629,
+  "ai_cost_by_kind": {
+   "formula": {
+    "calls": 0,
+    "cache_hits": 3,
+    "input_tokens": 431,
+    "output_tokens": 160,
+    "cost_usd": 0.004062
+   },
+   "kv": {
+    "calls": 0,
+    "cache_hits": 1,
+    "input_tokens": 1632,
+    "output_tokens": 77,
+    "cost_usd": 0.006656
+   },
+   "algorithm": {
+    "calls": 0,
+    "cache_hits": 1,
+    "input_tokens": 390,
+    "output_tokens": 164,
+    "cost_usd": 0.003993
+   },
+   "inline_math": {
+    "calls": 0,
+    "cache_hits": 7,
+    "input_tokens": 2082,
+    "output_tokens": 614,
+    "cost_usd": 0.017002
+   },
+   "qc": {
+    "calls": 11,
+    "cache_hits": 0,
+    "input_tokens": 4736,
+    "output_tokens": 1008,
+    "cost_usd": 0.032261
+   },
+   "judge": {
+    "calls": 5,
+    "cache_hits": 0,
+    "input_tokens": 14897,
+    "output_tokens": 2030,
+    "cost_usd": 0.082655
+   }
+  },
+  "qc_checked": 11,
+  "qc_pass": 11,
+  "qc_fail": 0,
+  "qc_errors": 0,
+  "judge_pages": 5,
+  "judge_elements": 79,
+  "judge_errors": [],
+  "judge_missing": [
+   {
+    "page": 1,
+    "missing": "arXiv:2609.05822v1 [cs.LG] 5 Sep 2026 stamp on the left margin; Creative Commons license icon/image"
+   },
+   {
+    "page": 3,
+    "missing": "The last paragraph of section 3.2 beginning 'We compare NOMAD-RL with per-zone MPC and constant-setpoint PID on a 3-zone building with inter-zone thermal coupling, using the building-level cumulative cost aggregated over the three zones.' is on the page but not extracted. Also equation label '(1)', "
+   },
+   {
+    "page": 3,
+    "missing": "Most of the page content is missing from the list, including: section headings (2.4, 3, 3.1, 3.2), equations (1, 2, 3), Algorithm 1 box, Figure 2 caption, and all body text paragraphs throughout the page."
+   }
+  ],
+  "judge_mean_score": 0.972
+ },
+ "elements": [
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "# Generalizing HVAC Control With Domain Randomized Reinforcement Learning",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     90.2,
+     82.5,
+     521.8,
+     119.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 0,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Pablo Boitel",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     154.1,
+     130.2,
+     212.7,
+     142.2
+    ]
+   ],
+   "bbox": [
+    151.10200000000003,
+    127.19836159999988,
+    215.67052480000004,
+    146.1535616
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 1,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "pablo.boitel.1@ens.etsmtl.ca École de technologie supérieure (ÉTS) Montréal, Québec, Canada",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     106.6,
+     143.7,
+     260.8,
+     177.6
+    ]
+   ],
+   "bbox": [
+    103.59900000000003,
+    140.68168579999997,
+    263.770235,
+    181.55428580000012
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 2,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Kun Zhang",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     402.1,
+     130.2,
+     457.1,
+     142.2
+    ]
+   ],
+   "bbox": [
+    399.1070000000001,
+    127.1983616,
+    460.1128752000001,
+    146.1535616000001
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 3,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "kun.zhang@etsmtl.ca École de technologie supérieure (ÉTS) Montréal, Québec, Canada",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     352.8,
+     143.7,
+     507,
+     177.6
+    ]
+   ],
+   "bbox": [
+    349.8230000000001,
+    140.68168580000008,
+    509.99423500000006,
+    181.55428580000023
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 4,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "## Abstract",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     186.6,
+     95.4,
+     197.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 5,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Deploying advanced HVAC (Heating, Ventilation and Air Conditioning) controllers at scale remains difficult because performance often depends on accurate building models or per-site retuning. We propose NOMAD-RL (Neural Online Meta-Adaptation for Dynamics), a general-purpose Reinforcement Learning (RL) controller designed to transfer across heterogeneous thermal zones through a universal, non-invasive thermostat interface. The controller acts on temperature setpoints from zone measurements and forecasts, while a recurrent policy supports online adaptation under partial observability.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.4,
+     201.8,
+     295.6,
+     309.4
+    ]
+   ],
+   "bbox": [
+    50.368,
+    198.7907712,
+    298.557547456,
+    313.3871712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.95
+    },
+    "agreement": 0.983,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.983,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 6,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Our main contribution is an adaptive domain randomization scheme based on physics-informed normalizing flows, which models correlated and multimodal distributions of thermal-zone parameters while maintaining physical plausibility and controllability. This produces a realistic and progressively adaptive training curriculum that improves transfer across buildings. We evaluate NOMAD-RL against a constant-setpoint PID controller, RL without domain randomization, and MPC in singleand multi-zone settings. NOMAD-RL consistently outperforms the PID and non-randomized RL baselines, and approaches the performance of a well-tuned MPC, especially in the more challenging multi-zone case. These results highlight the potential of adaptive, physics-informed domain randomization for robust and transferable HVAC control.",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     311.4,
+     295.6,
+     451.9
+    ]
+   ],
+   "bbox": [
+    50.798,
+    308.3797712,
+    298.5635981312001,
+    455.8531712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.946
+    },
+    "agreement": 0.982,
+    "judge": {
+     "score": 0.8,
+     "issue": "\"singleand\" should be \"single- and\" (hyphenation/spacing)"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.982,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 7,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "## CCS Concepts",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     466.7,
+     123.1,
+     477.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 8,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "• Applied computing → Engineering; • General and reference → General conference proceedings; • Computing methodologies → Control methods.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     481.2,
+     295.7,
+     512.8
+    ]
+   ],
+   "bbox": [
+    50.798,
+    478.15149279999997,
+    298.65319513599997,
+    516.7611712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.917
+    },
+    "agreement": 0.972,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.972,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 9,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "## Keywords",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     527.6,
+     102.9,
+     538.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 10,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "content_markdown": "Keywords: HVAC, Reinforcement learning, Control, Domain randomization",
+   "confidence": 0.84,
+   "method": "label+list-line",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     542.8,
+     289.3,
+     551.8
+    ]
+   ],
+   "bbox": [
+    50.798,
+    539.7857712,
+    292.2735968000001,
+    555.7521712
+   ],
+   "key": "Keywords",
+   "value": "HVAC, Reinforcement learning, Control, Domain randomization",
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.907
+    },
+    "agreement": 0.969,
+    "judge": {
+     "score": 0.8,
+     "issue": "Formatted as key_value but content matches page; minor format difference"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 0.969,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 11,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "ACM Reference Format: Pablo Boitel and Kun Zhang. 2026. Generalizing HVAC Control With Domain Randomized Reinforcement Learning. In ACM Sustainability Week 2026 (ACM Sustainability Week Companion ’26), June 22–25, 2026, Banff, AB, Canada. ACM, New York, NY, USA, 4 pages. https://doi.org/10.1145/3765611. 3815359",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.5,
+     565.3,
+     295.4,
+     623.1
+    ]
+   ],
+   "bbox": [
+    50.503,
+    562.2669931,
+    298.390540436,
+    627.0660333000001
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.955
+    },
+    "agreement": 0.985,
+    "judge": {
+     "score": 0.8,
+     "issue": "DOI split across two lines as '3765611. 3815359' with a space; original has no space"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.985,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 12,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "This work is licensed under a Creative Commons Attribution 4.0 International License. ACM Sustainability Week Companion ’26, Banff, AB, Canada © 2026 Copyright held by the owner/author(s).",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.3,
+     668.5,
+     295.1,
+     693
+    ]
+   ],
+   "bbox": [
+    50.317,
+    665.5240954,
+    298.1208444839999,
+    697.0318953999999
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.965
+    },
+    "agreement": 0.988,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.988,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 13,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "content_markdown": "ACM ISBN: 979-8-4007-2199-1/2026/06",
+   "confidence": 0.95,
+   "method": "label+typed-value",
+   "flags": [],
+   "key": "ACM ISBN",
+   "value": "979-8-4007-2199-1/2026/06",
+   "boxes": [
+    [
+     53.6,
+     694,
+     162,
+     701
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 14,
+   "confidence_method": 0.75
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "https://doi.org/10.1145/3765611.3815359",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     702,
+     166.9,
+     709
+    ]
+   ],
+   "bbox": [
+    50.798,
+    698.9980954,
+    169.94093120000005,
+    712.9718954
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 15,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "## 1 Introduction",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     186.6,
+     397.5,
+     197.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 16,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Buildings account for 30% of global final energy use and 26% of energy-related $CO_2$ emissions [6], making HVAC control a promising lever for reducing both operating costs and emissions.",
+   "confidence": 0.97,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     318,
+     201.8,
+     559.7,
+     232.7
+    ]
+   ],
+   "math_chars": 2,
+   "bbox": [
+    314.955,
+    198.7907712,
+    562.7172056576001,
+    236.67417120000005
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.97,
+     "markitdown": 0.97,
+     "textract": 0.904
+    },
+    "agreement": 0.948,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.948,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "Buildings account for 30% of global final energy use and 26% of energy-related 𝐶𝑂 2 emissions [6], making HVAC control a promising lever for reducing both operating costs and emissions.",
+   "qc_score": 1,
+   "id": 17,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Model Predictive Control (MPC) remains the reference approach because it can explicitly balance comfort and energy use under operational constraints. However, its large-scale deployment is limited by the effort required to derive, calibrate, and maintain accurate models, especially beyond simple single-zone settings [3, 4]. Reinforcement Learning (RL) has therefore emerged as an alternative. Yet RL offers little advantage when it also relies on highly calibrated simulators: MPC depends on models explicitly, whereas RL depends on them implicitly through training environments.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.7,
+     234.7,
+     559.7,
+     331.3
+    ]
+   ],
+   "bbox": [
+    314.695,
+    231.66677119999997,
+    562.7205981312,
+    335.3051712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.934
+    },
+    "agreement": 0.978,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.978,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 18,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "This motivates a different objective for RL in HVAC control: learn controllers that transfer across heterogeneous thermal zones. The key intuition is that many physically different zones, exhibit similar closed-loop behavior when controlled through a thermostat interface. A controller trained across varied zones, while retaining memory of past dynamics and adapting online, can therefore learn transferable strategies rather than zone-specific heuristics.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.7,
+     333.3,
+     559.6,
+     408
+    ]
+   ],
+   "bbox": [
+    314.686,
+    330.2977712,
+    562.5820941504,
+    412.0171712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.944
+    },
+    "agreement": 0.981,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.981,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 19,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "We propose NOMAD-RL (Neural Online Meta-Adaptation for Dynamics), a general-purpose RL controller designed for this setting. NOMAD-RL acts through a universal thermostat interface and uses recurrent policies to handle partial observability and online adaptation. To promote transfer, training relies on adaptive domain randomization over thermal-zone dynamics. Rather than sampling simulator parameters independently, we model their joint distribution with neural spline flows and constrain it with physicsinformed regularization so that training remains both diverse and physically plausible.",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     410,
+     559.7,
+     517.6
+    ]
+   ],
+   "bbox": [
+    314.955,
+    406.9918384,
+    562.7198449536,
+    521.6061712000001
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.958
+    },
+    "agreement": 0.986,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.986,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 20,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Our contributions are fourfold. First, we introduce a flow-based adaptive domain randomization scheme that captures correlated and multimodal distributions of thermal-zone parameters. Second, we enforce physical plausibility and controllability through physicsinformed regularization. Third, we propose a stable training objective based on a context-normalized reward and a Boltzmann target with gradient-refined candidates, improving sample efficiency in high dimension. Fourth, we combine this curriculum with a recurrent RL controller that exploits interaction history and forecasts to support rapid adaptation under partial observability.",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.6,
+     519.6,
+     559.7,
+     627.2
+    ]
+   ],
+   "bbox": [
+    314.623,
+    516.5987712,
+    562.7156206720001,
+    631.1951712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.96
+    },
+    "agreement": 0.987,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.987,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 21,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Experiments in both single-zone and multi-zone settings show that NOMAD-RL consistently outperforms constant-setpoint and non-randomized RL baselines, while approaching the performance of a well-tuned MPC. These results suggest that adaptive, physicsinformed domain randomization can make RL a practical path toward robust and transferable HVAC control across diverse buildings.",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.6,
+     629.2,
+     559.7,
+     692.9
+    ]
+   ],
+   "bbox": [
+    314.623,
+    626.1877712,
+    562.715684544,
+    696.9481711999999
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.977
+    },
+    "agreement": 0.992,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.992,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 22,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "content_markdown": "https: //doi.org/10.1145/3765611.3815359",
+   "confidence": 0.8,
+   "method": "ai-keyvalue",
+   "flags": [
+    "ai_added"
+   ],
+   "key": "https",
+   "value": "//doi.org/10.1145/3765611.3815359",
+   "id": 23,
+   "evidence": {
+    "judge": {
+     "score": 0.8,
+     "issue": "Space after 'https:' not present in original URL; duplicate of element 15"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.308,
+     "judge": 0.692
+    }
+   },
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "ACM Sustainability Week Companion ’26, June 22–25, 2026, Banff, AB, Canada",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.6,
+     62,
+     280.2,
+     69
+    ]
+   ],
+   "bbox": [
+    50.582,
+    59.0259906,
+    283.20260479999996,
+    72.99979059999998
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 24,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "Pablo Boitel and Kun Zhang",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     476.9,
+     62,
+     558.2,
+     69
+    ]
+   ],
+   "bbox": [
+    473.87073859999987,
+    59.0259906,
+    561.1991942,
+    72.99979059999998
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 25,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "image",
+   "page": 2,
+   "content_markdown": "![Figure 1](images/page2_figure_1.png)\n\nFigure 1: Architecture of NOMAD-RL",
+   "confidence": 0.95,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    104.72794196809936,
+    87.56212291490363,
+    506.7719141981633,
+    285.19337673401935
+   ],
+   "boxes": [
+    [
+     104.7,
+     87.6,
+     506.8,
+     285.2
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 26,
+   "confidence_method": 0.75,
+   "image_file": "images/page2_figure_1.png"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "## 2 Method",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     325.2,
+     108.3,
+     336.1
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 27,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "We consider a general and practical control setting in which the agent interacts with the building through a standard thermostat interface. Rather than directly controlling the heating plant, the controller observes zone temperature and power, adjusts the temperature setpoint. This supervisory control approach improves safety, since actions can be constrained within a reasonable comfort range, preserves interpretability, and avoids learning low-level actuation already handled by existing PID loops. It also promotes transfer across buildings, as closed-loop thermostat-level behavior tends to be more consistent than plant dynamics. See Fig.1 for an overview of the architecture of NOMAD-RL and details are given below.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.4,
+     340.4,
+     295.6,
+     459
+    ]
+   ],
+   "bbox": [
+    50.368,
+    337.4117712,
+    298.556711936,
+    462.9671712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.967,
+     "textract": 0.957
+    },
+    "agreement": 0.975,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.975,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 28,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "### 2.1 Thermal zone modeling",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     477.8,
+     196.7,
+     488.7
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 29,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "In this work, we use a generic thermal-zone simulator based on a fifth-order resistance-capacitance (RC5) model coupled with a hydronic heat pump and a low-level PID controller; following [1]. The model is implemented in JAX to support efficient simulation and automatic differentiation.",
+   "confidence": 0.94,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.5,
+     493,
+     295.4,
+     545.8
+    ]
+   ],
+   "bbox": [
+    50.529,
+    490.0437712,
+    298.4256342784,
+    549.8461712000001
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.947,
+     "textract": 0.925
+    },
+    "agreement": 0.957,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.957,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 30,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "The parameters include those of building envelope, internal mass, heat pump characteristics, and PID gains, resulting in a 25dimensional domain space. This compact but expressive setup provides a convenient testbed for evaluating transfer, robustness, and adaptive domain randomization, while still allowing strong MPC baselines to be computed on the nominal model.",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.6,
+     547.8,
+     295.6,
+     611.6
+    ]
+   ],
+   "bbox": [
+    50.574,
+    544.8387712,
+    298.5635981312001,
+    615.5991712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.96,
+     "textract": 0.943
+    },
+    "agreement": 0.968,
+    "judge": {
+     "score": 0.8,
+     "issue": "\"25dimensional\" should be \"25-dimensional\" (missing hyphen)"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.968,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 31,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "### 2.2 Reinforcement learning controller",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     630.5,
+     249.4,
+     641.4
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 32,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "We formulate HVAC control as a partially observable sequential decision-making problem (POMDP). Since the controller does not observe the full thermal states of the building, it must act from limited measurements and delayed effects. This motivates a recurrent RL policy to infer hidden dynamics from interaction history. At each step, the agent observes the current zone temperature, power consumption, comfort bounds, outdoor conditions, occupancy, electricity price, and time features, together with short-term forecasts of the main exogenous inputs. Rather than directly controlling the heating plant, the policy outputs an incremental update to the thermostat setpoint, clipped to a safe comfort range. This preserves interpretability, simplifies deployment, and keeps low-level actuation handled by the existing PID loop.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.4,
+     645.7,
+     295.6,
+     709.4
+    ],
+    [
+     318,
+     326.7,
+     559.7,
+     401.4
+    ]
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.955,
+     "textract": 0.955
+    },
+    "agreement": 0.97,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.97,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 33,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "Forecast trajectories are encoded with a temporal convolution module and fused with current measurements into a compact latent representation. This representation is then passed to a recurrent LSTM-based actor–critic policy, providing the required memory to adapt online to partially observed and changing dynamics. We train the controller with Recurrent PPO, using the standard actor–critic implementation from the SB3-Contrib library.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     403.4,
+     558.2,
+     478.1
+    ]
+   ],
+   "bbox": [
+    314.955,
+    400.4257712,
+    561.2062116096001,
+    482.1451712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.947,
+     "textract": 0.947
+    },
+    "agreement": 0.965,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.965,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 34,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "The reward reflects the operational HVAC objective: minimizing electricity cost, maintaining comfort and avoiding excessive actuator saturation. To make training comparable across heterogeneous buildings and operating conditions, we use a normalized reward relative to a fixed-setpoint PID reference rollout computed at the start of each episode. This replay-based normalization differs from the standard online RL setting, where trajectories are stochastic, nonreproducible, and cannot be exactly replayed. It therefore provides a stable learning signal under domain randomization and measures improvement over a simple but realistic reference controller.",
+   "confidence": 0.94,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     480.1,
+     559.7,
+     587.7
+    ]
+   ],
+   "bbox": [
+    314.955,
+    477.1377712,
+    562.7170026048001,
+    591.7351712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.94,
+     "textract": 0.93
+    },
+    "agreement": 0.957,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.957,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 35,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "### 2.3 Domain randomization for RL training",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     608.5,
+     535.6,
+     619.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 36,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "To promote transfer across heterogeneous thermal zones, we train the policy under domain randomization. At the beginning of each episode, all the simulator parameters $\\xi \\in \\mathbb{R}^{25}$ are sampled from a distribution $p_\\phi(\\xi)$, while the policy does not observe $\\xi$ directly. Training therefore optimizes expected return over a family of environments rather than a single nominal model.",
+   "confidence": 0.97,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     317.7,
+     623.8,
+     559.7,
+     687.5
+    ]
+   ],
+   "math_chars": 5,
+   "bbox": [
+    314.686,
+    620.7577712,
+    562.717649152,
+    691.5191712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.965,
+     "markitdown": 0.91,
+     "textract": 0.934
+    },
+    "agreement": 0.936,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.936,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "To promote transfer across heterogeneous thermal zones, we train the policy under domain randomization. At the beginning of each episode, all the simulator parameters 𝜉 ∈ R25 are sampled from a distribution 𝑝 𝜙 (𝜉), while the policy does not observe 𝜉 directly. Training therefore optimizes expected return over a family of environments rather than a single nominal model.",
+   "qc_score": 1,
+   "id": 37,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "The main challenge is to adapt $p_\\phi$ so that it generates informative and realistic environments: if the distribution is too narrow, the",
+   "confidence": 0.96,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     318,
+     687.5,
+     559.7,
+     709.4
+    ]
+   ],
+   "math_chars": 2,
+   "bbox": [
+    314.955,
+    684.5212304,
+    562.7162379648,
+    713.4361712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.951,
+     "markitdown": 0.903,
+     "textract": 0.903
+    },
+    "agreement": 0.919,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.919,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "The main challenge is to adapt 𝑝 𝜙 so that it generates informative and realistic environments: if the distribution is too narrow, the",
+   "qc_score": 1,
+   "id": 38,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "policy overfits; if it is too broad, training becomes unstable. Building upon previous work [2, 5, 7], we address this challenge with an adaptive domain randomization scheme based on normalizing flows.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     86.8,
+     295.6,
+     128.6
+    ]
+   ],
+   "bbox": [
+    50.798,
+    83.77177119999999,
+    298.55904319999996,
+    132.61517119999996
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.93,
+     "textract": 0.962
+    },
+    "agreement": 0.964,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.964,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 39,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "We represent $p_\\phi(\\xi)$ with a neural spline flow, which can model correlated, multimodal, and high-dimensional parameter distributions. Rather than optimizing the flow directly through noisy gradients, we construct an empirical Boltzmann target over candidate environments and fit the flow to it by weighted maximum likelihood, yielding a more stable update.",
+   "confidence": 0.97,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     53.8,
+     128.6,
+     295.6,
+     194.4
+    ]
+   ],
+   "math_chars": 3,
+   "bbox": [
+    50.798,
+    125.61623040000006,
+    298.56284495360006,
+    198.3681712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.982,
+     "markitdown": 0.933,
+     "textract": 0.933
+    },
+    "agreement": 0.949,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.949,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "We represent 𝑝 𝜙 (𝜉) with a neural spline flow, which can model correlated, multimodal, and high-dimensional parameter distributions. Rather than optimizing the flow directly through noisy gradients, we construct an empirical Boltzmann target over candidate environments and fit the flow to it by weighted maximum likelihood, yielding a more stable update.",
+   "qc_score": 1,
+   "id": 40,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "To remain effective in high-dimensional settings, candidate parameters are first sampled uniformly over the admissible domain, then refined through a few gradient steps. Each random draw thus becomes a short local search trajectory, which improves coverage of the parameter space. Each candidate is evaluated using three components: the return under the current policy $J_\\theta(\\xi)$, a physical plausibility cost $C_P(\\xi)$, and a surprise bonus $\\log p_\\phi(\\xi)$ that promotes exploration. The resulting utility $U(\\xi)$, which measures the relevance of a parameter vector (higher is better), is defined as",
+   "confidence": 0.96,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     53.8,
+     196.4,
+     295.6,
+     293
+    ]
+   ],
+   "math_chars": 10,
+   "bbox": [
+    50.798,
+    193.36077120000004,
+    298.56227904,
+    296.9981712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.959,
+     "markitdown": 0.902,
+     "textract": 0.902
+    },
+    "agreement": 0.921,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.921,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "To remain effective in high-dimensional settings, candidate parameters are first sampled uniformly over the admissible domain, then refined through a few gradient steps. Each random draw thus becomes a short local search trajectory, which improves coverage of the parameter space. Each candidate is evaluated using three components: the return under the current policy 𝐽 𝜃 (𝜉), a physical plausibility cost 𝐶 𝑃 (𝜉), and a surprise bonus log𝑝 𝜙 (𝜉) that promotes exploration. The resulting utility 𝑈 (𝜉), which measures the relevance of a parameter vector (higher is better), is defined as",
+   "qc_score": 1,
+   "id": 41,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "formula",
+   "page": 3,
+   "content_markdown": "$$ U(\\xi) = J_{\\theta}(\\xi) - \\lambda_{\\text{phys}} C_P(\\xi) + \\lambda_{\\text{sur}}(-\\log p_{\\phi}(\\xi)) $$",
+   "confidence": 0.98,
+   "method": "math-detect+ai-latex",
+   "flags": [
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "bbox": [
+    85.997,
+    287.3900368,
+    298.5823504,
+    316.6830449
+   ],
+   "boxes": [
+    [
+     86,
+     287.4,
+     298.6,
+     316.7
+    ]
+   ],
+   "evidence": {
+    "tool_support": {},
+    "agreement": null,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true
+    },
+    "signals": {
+     "method": 0.95,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.308,
+     "judge": 0.692
+    }
+   },
+   "qc_score": 0.95,
+   "id": 42,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "This utility yields the Boltzmann weights, i.e., the analytical solution of the associated expectation-maximization problem:",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     313.6,
+     294,
+     333.5
+    ]
+   ],
+   "bbox": [
+    50.798,
+    310.6207712,
+    297.0412853120001,
+    337.5461712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.949,
+     "textract": 0.949
+    },
+    "agreement": 0.966,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.966,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 43,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "formula",
+   "page": 3,
+   "content_markdown": "$$ w_i = \\text{softmax}\\left(\\frac{U(\\xi_i)}{\\tau}\\right)_i $$",
+   "confidence": 0.98,
+   "method": "math-detect+ai-latex",
+   "flags": [
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "bbox": [
+    127.74799999999999,
+    327.4280368,
+    298.5823504,
+    368.5093283
+   ],
+   "boxes": [
+    [
+     127.7,
+     327.4,
+     298.6,
+     368.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {},
+    "agreement": null,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true
+    },
+    "signals": {
+     "method": 0.95,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.308,
+     "judge": 0.692
+    }
+   },
+   "qc_score": 0.95,
+   "id": 44,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "where 𝜏 controls how concentrated the distribution is.",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.5,
+     362.6,
+     251.8,
+     373.6
+    ]
+   ],
+   "bbox": [
+    50.46600000000001,
+    359.59723040000006,
+    254.7758688,
+    377.55417120000004
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 45,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "The physical cost $C_P(\\xi)$ constrains the curriculum to realistic and controllable regions of the parameter space by penalizing implausible heat-pump efficiencies, poor comfort regulation under a fixed-setpoint baseline controller, and excessive actuator saturation. Figure 2 shows a 2D slice of the resulting learned distribution in the $(gA, C_i)$ space, i.e., equivalent solar area and internal capacitance.",
+   "confidence": 0.97,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     53.8,
+     373.6,
+     295.6,
+     439.3
+    ]
+   ],
+   "math_chars": 7,
+   "bbox": [
+    50.798,
+    370.5562304,
+    298.55735751680015,
+    443.3071712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.972,
+     "markitdown": 0.922,
+     "textract": 0.918
+    },
+    "agreement": 0.937,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.937,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "The physical cost 𝐶 𝑃 (𝜉) constrains the curriculum to realistic and controllable regions of the parameter space by penalizing implausible heat-pump efficiencies, poor comfort regulation under a fixed-setpoint baseline controller, and excessive actuator saturation. Figure 2 shows a 2D slice of the resulting learned distribution in the (𝑔𝐴,𝐶 𝑖 ) space, i.e., equivalent solar area and internal capacitance.",
+   "qc_score": 1,
+   "id": 46,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "image",
+   "page": 3,
+   "content_markdown": "![Figure 2](images/page3_figure_2.png)\n\nFigure 2: 2D slice of the learned parameter-flow distribution in the (𝑔𝐴,𝐶 𝑖 ) space over the target Boltzmann distribution (left) and their correlation (right)",
+   "confidence": 0.94,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    65.811,
+    451.19780000000003,
+    282.03012,
+    541.851
+   ],
+   "boxes": [
+    [
+     65.8,
+     451.2,
+     282,
+     541.9
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.957,
+     "textract": 0.957
+    },
+    "agreement": 0.971,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 0.971,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 47,
+   "confidence_method": 0.75,
+   "image_file": "images/page3_figure_2.png"
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "The parameter distribution is then updated from the weighted candidate set using a Boltzmann-weighted negative log-likelihood with a KL trust region:",
+   "confidence": 0.94,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.5,
+     600.5,
+     294,
+     631.4
+    ]
+   ],
+   "bbox": [
+    50.467,
+    597.5107712,
+    297.0447886016001,
+    635.3951712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.924,
+     "textract": 0.924
+    },
+    "agreement": 0.949,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.949,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 48,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "formula",
+   "page": 3,
+   "content_markdown": "$$ \\min_{\\phi} \\quad L(\\phi) = -\\sum_{i=1}^{N} w_i \\log p_{\\phi}(\\xi_i) + \\beta D_{\\mathrm{KL}}(p_{\\phi} \\| p_{\\phi_{\\mathrm{old}}}) $$",
+   "confidence": 0.98,
+   "method": "math-detect+ai-latex",
+   "flags": [
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "bbox": [
+    75.513,
+    626.9650283000001,
+    298.5833503999999,
+    672.0780449
+   ],
+   "boxes": [
+    [
+     75.5,
+     627,
+     298.6,
+     672.1
+    ]
+   ],
+   "evidence": {
+    "tool_support": {},
+    "agreement": null,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true
+    },
+    "signals": {
+     "method": 0.95,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.308,
+     "judge": 0.692
+    }
+   },
+   "qc_score": 1,
+   "id": 49,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "This stabilizes successive updates while allowing the distribution to expand gradually as the policy improves. Overall, NOMAD-RL alternates between updating the recurrent policy on environments sampled from the current flow and updating the flow from refined",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     667.6,
+     294.3,
+     709.4
+    ]
+   ],
+   "bbox": [
+    50.798,
+    664.5937712,
+    297.30299402240007,
+    713.4361712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.956,
+     "textract": 0.931
+    },
+    "agreement": 0.962,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.962,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 50,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "ACM Sustainability Week Companion ’26, June 22–25, 2026, Banff, AB, Canada",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     331.6,
+     62,
+     558.2,
+     69
+    ]
+   ],
+   "bbox": [
+    328.58,
+    59.0259906,
+    561.2006048,
+    72.99979059999998
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 51,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "candidates scored by utility, yielding an adaptive curriculum over realistic thermal-zone dynamics (see the Algorithm 1 for the steps).",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     86.8,
+     559.6,
+     106.7
+    ]
+   ],
+   "bbox": [
+    314.955,
+    83.77177119999999,
+    562.581905856,
+    110.69717119999996
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.953,
+     "textract": 0.953
+    },
+    "agreement": 0.969,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.969,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 52,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "content_markdown": "### 2.4 Training configuration",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     117.3,
+     455.9,
+     128.2
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 53,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "Training was limited to a preliminary 6𝑒6-steps run on a single CPU/GPU, using Algorithm 1, with limited hyperparameter tuning.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.7,
+     130.5,
+     559.6,
+     152.4
+    ]
+   ],
+   "bbox": [
+    314.686,
+    127.49023039999997,
+    562.581905856,
+    156.40617120000002
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.959,
+     "textract": 0.959
+    },
+    "agreement": 0.973,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.973,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 54,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "Fig. 3 illustrates a representative NOMAD-RL training episode in our tuned GYM environment, showing the full sequence of actions and observations. High-price events (red) are periods the controller must anticipate, where power should be minimized. Lowoccupancy periods (blue) indicate times when temperature may temporarily drift outside comfort bounds without penalty. The episode starts with a warm-up phase (yellow). The figure also reports the constant-setpoint baseline, weather forecasts, power and COP trajectories, and an example occupancy profile.",
+   "confidence": 0.94,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     154.4,
+     559.7,
+     251
+    ]
+   ],
+   "bbox": [
+    314.955,
+    151.3808383999999,
+    562.7216382336001,
+    255.0361712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.923,
+     "textract": 0.923
+    },
+    "agreement": 0.949,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.949,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 55,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "algorithm",
+   "page": 3,
+   "content_markdown": "**Algorithm 1** NOMAD-RL  \n**Require:** policy parameters $\\theta$, flow parameters $\\phi$  \n1: **for** $n = 1$ to $N$ **do**  \n2: Train Policy($\\theta$, $p_\\phi$)  \n3: $\\mathcal{D} \\leftarrow$ Sample And Refine($\\mathcal{X}$, $U$)  \n4: $w \\leftarrow$ Boltzmann Weights($\\mathcal{D}$, $U$)  \n5: Update Flow($\\phi$, $\\mathcal{D}$, $w$)  \n6: **end for**",
+   "confidence": 0.83,
+   "method": "algorithm-detect+ai-latex",
+   "flags": [
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "bbox": [
+    313.623,
+    256.94183839999994,
+    503.7846256000001,
+    358.29323840000006
+   ],
+   "boxes": [
+    [
+     313.6,
+     256.9,
+     503.8,
+     358.3
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.675,
+     "markitdown": 0.579,
+     "textract": 0.588
+    },
+    "agreement": 0.614,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.85,
+     "agreement": 0.614,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "**Algorithm 1** NOMAD-RL  \nRequire: policy parameters θ, flow parameters φ  \n1: for n = 1 to N do  \n2: Train Policy(θ,p φ )  \n3: D ← Sample And Refine(X,U)  \n4: w ← Boltzmann Weights(D,U)  \n5: Update Flow(φ, D,w)  \n6: end for",
+   "qc_score": 0.85,
+   "id": 56,
+   "confidence_method": 0.85
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "content_markdown": "## 3 Results and evaluation of NOMAD-RL",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     374.7,
+     522.7,
+     385.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 57,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "After training, we evaluate **NOMAD-RL** against a constant setpoint PID controller, a recurrent PPO baseline trained without domain randomization, and MPC. **Costs are reported in euros, reflecting energy consumption, comfort, and saturation**. Percentages use $(C_\\text{ref} - C_\\text{NOMAD})/C_\\text{ref} \\times 100$; negative values mean that **NOMAD-RL** is more costly than the reference.",
+   "confidence": 0.97,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     317.6,
+     389.9,
+     559.7,
+     453.6
+    ]
+   ],
+   "math_chars": 3,
+   "bbox": [
+    314.641,
+    386.8548384,
+    562.7195400960001,
+    457.6341712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.981,
+     "markitdown": 0.923,
+     "textract": 0.943
+    },
+    "agreement": 0.949,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.949,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "After training, we evaluate NOMAD-RL against a constant setpoint PID controller, a recurrent PPO baseline trained without domain randomization, and MPC. Costs are reported in euros, reflecting energy consumption, comfort, and saturation. Percentages use (𝐶 ref −𝐶 NOMAD )/𝐶 ref ×100; negative values mean that NOMAD-RL is more costly than the reference.",
+   "qc_score": 0.95,
+   "id": 58,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "content_markdown": "### 3.1 Single-zone setting",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     464.2,
+     436.4,
+     475.1
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 59,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "We first compare NOMAD-RL with a recurrent PPO agent trained on a single fixed environment. Both policies are evaluated on the nominal zone and under randomized dynamics to assess robustness and out-of-domain generalization. We also compare them with MPC and a constant set-point PID controller on a representative sampled zone. In this setting, MPC has access to the exact thermal-zone model and serves as a near-global optimum reference.",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.5,
+     479.4,
+     558.2,
+     554.1
+    ]
+   ],
+   "bbox": [
+    314.525,
+    476.3998384,
+    561.2041288320002,
+    558.1381712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.958
+    },
+    "agreement": 0.986,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.986,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 60,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "As shown in Fig. 4, both RL controllers clearly outperform the constant set-point PID baseline. NOMAD-RL reduces cost by 70.4% relative to PID, but is 8.7% more costly than recurrent PPO on the nominal zone.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     556.1,
+     558.5,
+     598
+    ]
+   ],
+   "bbox": [
+    314.955,
+    553.1307712,
+    561.488353344,
+    601.9731712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.962,
+     "textract": 0.962
+    },
+    "agreement": 0.975,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.975,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 61,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "On the sampled zone with shifted dynamics (Fig. 5), NOMAD- RL reduces cost by 60.1% relative to PID and 51.4% relative to recurrent PPO, while being 46.6% more costly than MPC. This is notable because MPC has access to the exact model and therefore approximates the global optimum in this setting.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     599.9,
+     559.8,
+     652.8
+    ]
+   ],
+   "bbox": [
+    314.955,
+    596.9478384,
+    562.8105426624,
+    656.7681712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.937,
+     "textract": 0.937
+    },
+    "agreement": 0.958,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.958,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 62,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "content_markdown": "### 3.2 Multi-zone setting",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     663.3,
+     433.4,
+     674.3
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 63,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "WecompareNOMAD-RLwithper-zoneMPCandconstant-setpoint PID on a 3-zone building with inter-zone thermal coupling, using the building-level cumulative cost aggregated over the three zones.",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.5,
+     678.5,
+     560.6,
+     709.4
+    ]
+   ],
+   "bbox": [
+    314.525,
+    675.5348384,
+    563.557837376,
+    713.4361712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.973,
+     "textract": 0.973
+    },
+    "agreement": 0.982,
+    "judge": {
+     "score": 0.8,
+     "issue": "Missing spaces between words at the start ('WecompareNOMAD-RLwithper-zoneMPCandconstant-setpoint')"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.982,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 64,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "ACM Sustainability Week Companion ’26, June 22–25, 2026, Banff, AB, Canada",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.6,
+     62,
+     280.2,
+     69
+    ]
+   ],
+   "bbox": [
+    50.582,
+    59.0259906,
+    283.20260479999996,
+    72.99979059999998
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 65,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "Pablo Boitel and Kun Zhang",
+   "confidence": 0.96,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     476.9,
+     62,
+     558.2,
+     69
+    ]
+   ],
+   "bbox": [
+    473.87073859999987,
+    59.0259906,
+    561.1991942,
+    72.99979059999998
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 66,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "content_markdown": "![Figure 3](images/page4_figure_3.png)\n\nFigure 3: Behavior of the NOMAD-RL controller during training.",
+   "confidence": 0.95,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    53.798,
+    83.68259999999998,
+    558.2057,
+    221.442
+   ],
+   "boxes": [
+    [
+     53.8,
+     83.7,
+     558.2,
+     221.4
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 67,
+   "confidence_method": 0.75,
+   "image_file": "images/page4_figure_3.png"
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "content_markdown": "![Figure 4](images/page4_figure_4.png)\n\nFigure 4: NOMAD-RL vs. recurrent PPO without domain ran- domization on the nominal thermal zone.",
+   "confidence": 0.86,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    53.798,
+    259.29932800000006,
+    306.06598399999996,
+    365.827
+   ],
+   "boxes": [
+    [
+     53.8,
+     259.3,
+     306.1,
+     365.8
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 0.8,
+     "issue": "Hyphenation difference: 'ran- domization' is a line-break artifact but content is correct"
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 68,
+   "confidence_method": 0.75,
+   "image_file": "images/page4_figure_4.png"
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "content_markdown": "![Figure 5](images/page4_figure_5.png)\n\nFigure 5: NOMAD-RL vs. recurrent PPO without domain ran- domization vs. MPC on a sampled thermal zone.",
+   "confidence": 0.86,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    53.798,
+    418.797392,
+    306.063104,
+    525.0830000000001
+   ],
+   "boxes": [
+    [
+     53.8,
+     418.8,
+     306.1,
+     525.1
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 0.8,
+     "issue": "Hyphenation difference: 'ran- domization' is a line-break artifact but content is correct"
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 69,
+   "confidence_method": 0.75,
+   "image_file": "images/page4_figure_5.png"
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "NOMAD-RL remains effective in this more challenging setting: it reduces cost by 67.9% relative to constant-setpoint PID and is 14.5% more costly than MPC. The gap to MPC narrows as the problem becomes more complex, suggesting robustness in complex environments.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.6,
+     586.5,
+     295.1,
+     639.3
+    ]
+   ],
+   "bbox": [
+    50.592,
+    583.4898384,
+    298.10005575680003,
+    643.3101712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.911
+    },
+    "agreement": 0.97,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.97,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 70,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "content_markdown": "## 4 Conclusion",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     53.8,
+     652.4,
+     126.7,
+     663.3
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 71,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "This work addresses a central challenge in scalable HVAC control: achieving robust performance across heterogeneous thermal zones without per-site modeling or retuning. We introduced NOMAD- RL, a general-purpose RL controller built on a universal thermostat interface that preserves safety, interpretability, and practical deployability. This supervisory approach is non-invasive and lightweight enough for embedded devices or connected thermostats.",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     53.5,
+     667.6,
+     295.6,
+     709.4
+    ],
+    [
+     318,
+     262.4,
+     559.7,
+     293.3
+    ]
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.986,
+     "textract": 0.946
+    },
+    "agreement": 0.977,
+    "judge": {
+     "score": 0.8,
+     "issue": "Line-break hyphenation 'NOMAD- RL' and 'deploy- ability' are artifacts but content is correct"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.977,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 72,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "Our main contribution is an adaptive domain randomization framework based on physics-informed normalizing flows. By learning multimodal, correlated distributions over thermal-zone parameters while enforcing physical plausibility and controllability, the framework generates a realistic and progressively expanding training curriculum. Combined with a recurrent policy leveraging past observations and forecasts, it yields transferable control policies capable of rapid online adaptation in a meta-learning setting.",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     295.3,
+     559.7,
+     380.9
+    ]
+   ],
+   "bbox": [
+    314.955,
+    292.2617712,
+    562.7211361152001,
+    384.9411712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.955
+    },
+    "agreement": 0.985,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.985,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 73,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "Results support this approach. In single-zone settings, NOMAD- RL outperforms PID and non-randomized RL baselines, while remaining within 46.6% of MPC on the sampled zone. In multi-zone settings, it reduces PID cost by 67.9% and remains within 14.5% of MPC. This suggests that NOMAD-RL provides a path toward generalizable HVAC control without accurate models.",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     382.9,
+     559.7,
+     446.7
+    ]
+   ],
+   "bbox": [
+    314.955,
+    379.93377119999997,
+    562.720152384,
+    450.6941712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.952
+    },
+    "agreement": 0.984,
+    "judge": {
+     "score": 0.8,
+     "issue": "Line-break hyphenation 'NOMAD- RL' is an artifact but content is correct"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.984,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 74,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "Future work will focus on improving performance and real-world readiness through further training, hyperparameter tuning, expansion of the simulator and dataset pipeline, and validation on real buildings. We also plan to evaluate NOMAD-RL on HVAC benchmarks for generalization, and explore larger architectures, transformers, and flow matching for domain randomization. The implementation used in this work is publicly available.1",
+   "confidence": 0.86,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     448.7,
+     559.7,
+     523.4
+    ]
+   ],
+   "bbox": [
+    314.955,
+    445.6867712,
+    562.7131739520001,
+    527.4061712
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.932
+    },
+    "agreement": 0.977,
+    "judge": {
+     "score": 0.8,
+     "issue": "Footnote marker '1' appended inline rather than as superscript, minor formatting difference"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.977,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 75,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "content_markdown": "## References",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     534.1,
+     372.3,
+     545
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 76,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "[1] Arroyo et al. 2022. Reinforced model predictive control (RL-MPC) for building energy management. Applied Energy 309 (March 2022), 118346. doi:10.1016/j. apenergy.2021.118346 [2] Curtis et al. [n.d.]. Flow-based Domain Randomization for Learning and Sequencing Robotic Skills. ([n.d.]). [3] Drgoňa et al. 2020. All you need to know about model predictive control for buildings. Annual Reviews in Control 50 (Jan. 2020), 190–232. doi:10.1016/j.arcontrol. 2020.09.001 [4] Nagy et al. 2023. Ten questions concerning reinforcement learning for building energy management. Building and Environment 241 (Aug. 2023), 110435. doi:10. 1016/j.buildenv.2023.110435 [5] Tiboni et al. 2024. Domain Randomization via Entropy Maximization. doi:10. 48550/arXiv.2311.01885 arXiv:2311.01885 [cs]. [6] International Energy Agency. [n.d.]. Buildings - Energy System. IEA website. https://www.iea.org/energy-system/buildings Accessed: 2026-01-29. [7] OpenAI. 2019. Solving Rubik’s Cube with a Robot Hand. doi:10.48550/arXiv.1910. 07113 arXiv:1910.07113 [cs].",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     318,
+     547.8,
+     559.4,
+     682.3
+    ]
+   ],
+   "bbox": [
+    314.955,
+    544.8490954,
+    562.378061284,
+    686.3448954
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.95
+    },
+    "agreement": 0.983,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.983,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 77,
+   "confidence_method": 0.8
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "1https://github.com/paabL/NOMAD-RL",
+   "confidence": 0.95,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     317.8,
+     700.5,
+     431,
+     709
+    ]
+   ],
+   "bbox": [
+    314.829,
+    697.5042235,
+    434.00524959999996,
+    712.9718954
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.955
+    },
+    "agreement": 0.985,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.8,
+     "agreement": 0.985,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 78,
+   "confidence_method": 0.8
+  }
+ ]
+}

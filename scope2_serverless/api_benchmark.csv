@@ -1,0 +1,7 @@
+doc,quality,status,pages,wall_sec,job_sec,ai_calls,ai_cost_usd,compute_cost_usd,cost_usd,document_confidence,low_confidence_elements,truncated,error
+Paper1.pdf,standard,done,4,22.45,5.53,0,0,0.000256,0.000256,0.902,4,False,
+Paper1.pdf,accurate,done,4,48.95,34.59,17,0.14454,0.001675,0.222215,0.935,0,False,
+Paper2.pdf,standard,done,8,12.99,4.91,0,0,0.00023,0.00023,0.932,0,False,
+Paper2.pdf,accurate,done,8,49.57,41.29,15,0.175811,0.002011,0.329822,0.946,0,False,
+https://en.wikipedia.org/wiki/India,standard,done,1,6.86,4.19,0,0,0.000196,0.000196,0.892,86,False,
+https://en.wikipedia.org/wiki/India,accurate,done,1,6.85,4.27,0,0,0.0002,0.0002,0.892,86,False,

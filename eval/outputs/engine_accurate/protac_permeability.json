@@ -1,0 +1,3014 @@
+{
+ "report": {
+  "source": "/tmp/tmpa9gn3i6v/in.pdf",
+  "level": "accurate",
+  "engine_version": "v4-ensemble",
+  "elements": 57,
+  "images": [
+   "page2_figure_1.png",
+   "page3_figure_2.png",
+   "page4_figure_3.png"
+  ],
+  "inline_math_paragraphs": 6,
+  "witnesses": [
+   {
+    "tool": "pypdf",
+    "status": "ok",
+    "seconds": 1.34,
+    "pages": 8,
+    "error": ""
+   },
+   {
+    "tool": "markitdown",
+    "status": "ok",
+    "seconds": 4.63,
+    "pages": 8,
+    "error": ""
+   },
+   {
+    "tool": "textract",
+    "status": "ok",
+    "seconds": 18.44,
+    "pages": 8,
+    "error": ""
+   }
+  ],
+  "tool_scores": {
+   "pypdf": {
+    "precision": 0.981,
+    "recall": 0.996,
+    "f1": 0.989,
+    "pages": 8
+   },
+   "markitdown": {
+    "precision": 0.977,
+    "recall": 0.999,
+    "f1": 0.988,
+    "pages": 8
+   },
+   "engine": {
+    "precision": 0.995,
+    "recall": 0.972,
+    "f1": 0.983,
+    "pages": 8
+   },
+   "textract": {
+    "precision": 0.966,
+    "recall": 0.99,
+    "f1": 0.978,
+    "pages": 8
+   }
+  },
+  "coverage_mean": 0.969,
+  "coverage_by_page": [
+   {
+    "page": 1,
+    "coverage": 0.966,
+    "possibly_missing": [
+     "arXiv:2610.07998v1  [cs.DL]  6 Oct 2026"
+    ]
+   },
+   {
+    "page": 2,
+    "coverage": 0.98,
+    "possibly_missing": []
+   },
+   {
+    "page": 3,
+    "coverage": 0.927,
+    "possibly_missing": []
+   },
+   {
+    "page": 4,
+    "coverage": 0.919,
+    "possibly_missing": []
+   },
+   {
+    "page": 5,
+    "coverage": 0.989,
+    "possibly_missing": []
+   },
+   {
+    "page": 6,
+    "coverage": 0.972,
+    "possibly_missing": []
+   },
+   {
+    "page": 7,
+    "coverage": 1,
+    "possibly_missing": []
+   },
+   {
+    "page": 8,
+    "coverage": 0.999,
+    "possibly_missing": []
+   }
+  ],
+  "scanned_pages_filled": [],
+  "tables_replaced_by_consensus": 0,
+  "low_agreement_elements": 0,
+  "needs_review": 0,
+  "needs_ai_left": 0,
+  "text_disagree": 0,
+  "seconds_rules": 4.8,
+  "seconds_witnesses": 18.49,
+  "seconds_total": 31.28,
+  "budget_seconds": 780,
+  "scoring_weights": {
+   "judge": 0.45,
+   "agreement": 0.35,
+   "method": 0.2
+  },
+  "pages_total": 8,
+  "pages_processed": 8,
+  "page_sizes": [
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ],
+   [
+    612,
+    792
+   ]
+  ],
+  "ai_calls": 8,
+  "cache_hits": 7,
+  "errors": 0,
+  "ai_skipped_time_budget": 0,
+  "skipped_over_budget": 0,
+  "input_tokens": 23999,
+  "output_tokens": 1432,
+  "ai_seconds_total": 0,
+  "ai_cost_usd": 0.176158,
+  "ai_cost_by_kind": {
+   "kv": {
+    "calls": 0,
+    "cache_hits": 1,
+    "input_tokens": 1632,
+    "output_tokens": 73,
+    "cost_usd": 0.00659
+   },
+   "inline_math": {
+    "calls": 0,
+    "cache_hits": 6,
+    "input_tokens": 3942,
+    "output_tokens": 1618,
+    "cost_usd": 0.039706
+   },
+   "qc": {
+    "calls": 6,
+    "cache_hits": 0,
+    "input_tokens": 6008,
+    "output_tokens": 437,
+    "cost_usd": 0.027037
+   },
+   "judge": {
+    "calls": 8,
+    "cache_hits": 0,
+    "input_tokens": 23999,
+    "output_tokens": 1432,
+    "cost_usd": 0.102825
+   }
+  },
+  "qc_checked": 6,
+  "qc_pass": 6,
+  "qc_fail": 0,
+  "qc_errors": 0,
+  "judge_pages": 8,
+  "judge_elements": 57,
+  "judge_errors": [],
+  "judge_missing": [],
+  "judge_mean_score": 0.974
+ },
+ "elements": [
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "# The Challenges of PROTAC Permeability Prediction",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     113.5,
+     99.4,
+     497.9,
+     116.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 0,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Lukáš Hudec AI Laboratory for Molecular Engineering (AIME) Department of Computer Science and Engineering Chalmers University of Technology & University of Gothenburg Gothenburg, Sweden hudec@chalmers.se",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     177.3,
+     160.9,
+     434.7,
+     225.6
+    ]
+   ],
+   "bbox": [
+    174.299,
+    157.92658340000003,
+    437.70269620000005,
+    229.56469719999996
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 1,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Rocío Mercado AI Laboratory for Molecular Engineering (AIME) Department of Computer Science and Engineering Chalmers University of Technology & University of Gothenburg and Science for Life Laboratory (SciLifeLab), Gothenburg, Sweden rocio.mercado@chalmers.se",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     177.3,
+     243.7,
+     434.7,
+     319.2
+    ]
+   ],
+   "bbox": [
+    174.299,
+    240.65158339999994,
+    437.70269620000005,
+    323.1976971999999
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.972
+    },
+    "agreement": 0.991,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 0.991,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 2,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "## Abstract",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     283.8,
+     338.7,
+     328.2,
+     350.7
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 3,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Cell permeability is a key bottleneck for PROTAC development, and public data available to model it is scarce and inconsistent. We adapt an expert-in-the-loop LLM extraction workflow to mine PAMPA measurements from the primary literature, recovering image-only structures by optical chemical structure recognition and hand-verifying every record, expanding the public record from 31 PROTACs to 87. Ridge models trained on PROTAC-DB 3.0 reach $R^2 = 0.67$ within that resource but collapse on the newly extracted chemistry ($\\rho = 0.12$), while models trained on the new compounds transfer back successfully ($\\rho = 0.80$). We conclude that the current composition of the published records, and not dataset size, is limiting the construction of more generalizable models, and we outline what would need to change in reporting practices for better data-driven permeability models.",
+   "confidence": 0.98,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     143.9,
+     362.4,
+     469.8,
+     481.4
+    ]
+   ],
+   "math_chars": 2,
+   "bbox": [
+    140.866,
+    359.35032160000003,
+    472.788523773,
+    485.4039216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.977,
+     "markitdown": 0.977,
+     "textract": 0.977
+    },
+    "agreement": 0.977,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.977,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "Cell permeability is a key bottleneck for PROTAC development, and public data available to model it is scarce and inconsistent. We adapt an expert-in-the-loop LLM extraction workflow to mine PAMPA measurements from the primary literature, recovering image-only structures by optical chemical structure recognition and hand-verifying every record, expanding the public record from 31 PROTACs to 87. Ridge models trained on PROTAC-DB 3.0 reach R2 = 0.67 within that resource but collapse on the newly extracted chemistry (ρ = 0.12), while models trained on the new compounds transfer back successfully (ρ = 0.80). We conclude that the current composition of the published records, and not dataset size, is limiting the construction of more generalizable models, and we outline what would need to change in reporting practices for better data-driven permeability models.",
+   "qc_score": 0.95,
+   "id": 4,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "content_markdown": "## 1 Introduction",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     495.4,
+     190.8,
+     507.4
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 5,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "Proteolysis-targeting chimeras (PROTACs) degrade proteins by recruiting an E3 ubiquitin ligase, acting catalytically and not by sustained occupancy, thereby reaching targets that resist conventional inhibition.[1] Since a degrader must cross the plasma membrane to reach an intracellular target, cell permeability is a primary bottleneck for PROTAC development, and a natural target for predictive modeling. Joining two ligands via a linker, however, places them far outside the rule-of-five space (bRo5), where conventional ADME models break down [2]. Permeability is measured by several distinct assays: public domain PROTAC data is dominated by PAMPA, a cell-free, purely passivediffusion assay cheap enough to run routinely, but reported in inconsistent units and often buried in supplementary tables and images, limiting the amount of structured or machine-learning (ML) ready data available for modeling it computationally. The largest public resource, PROTAC-DB 3.0 [3], contains just 31 PROTACs with PAMPA measurements. The records are far from independent: a single paper typically reports PAMPA values for a series of close analogues varying only in the linker. We tackle the PROTAC permeability data problem by adapting an expert-in-the-loop LLM extraction workflow [4] to mine PAMPA values from the primary literature, recovering image-only structures by optical chemical structure recognition (OCSR) [5] and manually verifying every record, including a re-audit of existing PROTAC-DB 3.0 records. This yields 87 PROTACs with verified PAMPA values, nearly triple the public data prior to this study. On it we train a deliberately simple ridge regression",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     107.5,
+     519.6,
+     505.7,
+     709.6
+    ]
+   ],
+   "bbox": [
+    104.532,
+    516.6023216,
+    508.73927082399973,
+    713.5899216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 6,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "content_markdown": "40th Conference on Neural Information Processing Systems (NeurIPS 2026). Workshop: ML4Molecules: Agentic Systems for Molecular Sciences.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     107.7,
+     726,
+     504,
+     743.5
+    ]
+   ],
+   "bbox": [
+    104.721,
+    723.0254416,
+    506.99935331250003,
+    747.4605415999999
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 7,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "baseline over established descriptors [6] and characterize what such a baseline can and cannot recover from public PAMPA data. Our contributions, supported by the open release of our code, are:",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     74.2,
+     504.2,
+     95
+    ]
+   ],
+   "bbox": [
+    105,
+    71.15232159999994,
+    507.1645556840002,
+    99.0239216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 8,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "• A curated PAMPA dataset for PROTACs, expanding existing structured public data from n = 31 → 87 through agentic literature extraction with structure recovery from images.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     135.4,
+     105.2,
+     504,
+     126
+    ]
+   ],
+   "bbox": [
+    132.397,
+    102.15432159999989,
+    506.9986996999998,
+    130.02592160000006
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 9,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "• A characterization of what the public data currently supports: weak but non-trivial ranking (ρ ≈ 0.3 − 0.5) on PAMPA prediction, but not absolute prediction (R2 ≈ 0).",
+   "confidence": 0.97,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     135.4,
+     130.8,
+     504,
+     151.7
+    ]
+   ],
+   "bbox": [
+    132.39700000000002,
+    127.81732160000001,
+    507.0014792653998,
+    155.68892160000007
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.948
+    },
+    "agreement": 0.983,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 0.983,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 10,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "• Evidence that narrow chemical coverage in public data limits performance: predictive accuracy on original data doesn’t transfer to newly-mined data, unlike the reverse transfer.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     135.4,
+     156.5,
+     504,
+     177.4
+    ]
+   ],
+   "bbox": [
+    132.3970000000001,
+    153.48032160000002,
+    507.00203488,
+    181.35292160000006
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 11,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "## 2 Background",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     187.8,
+     188.8,
+     199.7
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 12,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "**Permeability prediction for degraders** Poongavanam et al. [7] introduced descriptor-based ML models of PROTAC cell permeability, and Kim et al. [6] trained 2D, 3D, and combined descriptor models on Caco-2 measurements from PROTAC-DB 3.0; we reuse their 17 2D descriptors. Both operate on tens to low hundreds of compounds. Where data is abundant (e.g., small molecules) the picture differs sharply: Ohlsson et al. [8] show that multitask graph neural networks trained on >10K harmonized Caco-2 and MDCK measurements beat single-task models by exploiting correlations between endpoints (neither condition holds here). Peteani et al. [9] report that models pre-trained on small molecules transfer only partially to degraders, heterobifunctionals worst of all. PAMPA is the only public PROTAC permeability endpoint sufficiently available to model; pooling it with sparser Caco-2 and cellular measurements would confound passive diffusion with active transport. We therefore work single-task on PAMPA here, using a regularized linear model on fixed descriptors.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "run_in_heading": "Permeability prediction for degraders",
+   "heading_level": 3,
+   "boxes": [
+    [
+     107.5,
+     212.3,
+     505.7,
+     331.4
+    ]
+   ],
+   "bbox": [
+    104.532,
+    209.3165834,
+    508.7440528719998,
+    335.4399216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 13,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "**Agentic extraction of assay data** Structured assay data remains locked in the text, tables, and supplements of primary publications, and LLM-based extraction has emerged as a practical route to unlocking it at scale [10]. For targeted protein degradation, Rao et al. [4] present an expert-in-the-loop workflow that reaches record-level F 1 = 0.98 and transfers across compound classes by terminology substitution alone. That workflow targets the pharmacodynamic axis of degradation, however, and doesn’t cover ADME properties. We transfer it to permeability herein, revealing some difficulties with text-only extraction; we thus couple the workflow to OCSR [5] and verify each record by hand.",
+   "confidence": 0.89,
+   "method": "pdfplumber",
+   "flags": [],
+   "run_in_heading": "Agentic extraction of assay data",
+   "heading_level": 3,
+   "boxes": [
+    [
+     107.6,
+     344.4,
+     505.7,
+     419.9
+    ]
+   ],
+   "bbox": [
+    104.641,
+    341.3955834,
+    508.7446682064001,
+    423.8819216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 0.8,
+     "issue": "F 1 should be F_1 (subscript); minor formatting difference"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 14,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "image",
+   "page": 2,
+   "content_markdown": "![Figure 1](images/page2_figure_1.png)\n\nFigure 1: Overview of the extraction pipeline. DOIs identified by PMC search are passed to an LLM-based mining tool [4]; every extracted record is then verified by hand, with image-only structures recovered by OCSR. Merging the verified records with re-audited PROTAC-DB 3.0 entries yields the final dataset of 87 PROTACs.",
+   "confidence": 0.95,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    108,
+    431.56138,
+    503.99915,
+    488.743
+   ],
+   "boxes": [
+    [
+     108,
+     431.6,
+     504,
+     488.7
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 15,
+   "confidence_method": 0.75,
+   "image_file": "images/page2_figure_1.png"
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "## 3 Methods",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     535.5,
+     170.4,
+     547.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 16,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 2,
+   "content_markdown": "### 3.1 Data",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     560.1,
+     150.9,
+     570
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 17,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "**Original dataset** Current publicly available datasets with permeability endpoints are often too small and not diverse enough to make reliable ML models for permeability prediction. PROTAC-DB 3.0 [3] contains 31 PROTACs with experimentally measured PAMPA values. Out of these 31, only 2 are “highly permeable\" PROTACs, both with CRBN as the E3 ligase, further showing the limited size and variety of the PROTACs. We verified all 31 records against their source publications, and replaced 2 records with (different) newly-mined values, resulting in 29 original records used.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "run_in_heading": "Original dataset",
+   "heading_level": 4,
+   "boxes": [
+    [
+     108,
+     580,
+     504,
+     644.6
+    ]
+   ],
+   "bbox": [
+    105,
+    577.0415834,
+    507.00029899399976,
+    648.6189216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 18,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 2,
+   "content_markdown": "**New dataset** We identified 124 DOIs of publicly available articles with keywords PAMPA, PRO- TACs, and permeability. We use the mining approach of Rao et al. [4] to extract records from them (Fig. 1). Because the tool only mines text, extracted entries were frequently incomplete or mismatched to the wrong molecule, and many PROTACs appeared in the source articles only as images. We therefore curated every entry by hand, mapping each measurement to its molecule and generating SMILES for image-only structures with DECIMER [5]. We compare the two datasets in Fig. 2,",
+   "confidence": 0.89,
+   "method": "pdfplumber",
+   "flags": [],
+   "run_in_heading": "New dataset",
+   "heading_level": 4,
+   "boxes": [
+    [
+     107.4,
+     657.4,
+     505.7,
+     722.2
+    ]
+   ],
+   "bbox": [
+    104.442,
+    654.4151818,
+    508.65012547919974,
+    726.1519216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 0.8,
+     "issue": "Line break inserted in 'PRO- TACs' (should be 'PROTACs'); minor hyphenation artifact"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 19,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "highlighting differences between the previous available dataset and the one created herein. The newly mined dataset consists of 87 PROTACs collected from PROTAC-DB 3.0 [3] & [11–23], and adds 8 permeable PROTACs (5 VHL & 3 CRBN) to the original dataset.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     74.2,
+     504.4,
+     105.9
+    ]
+   ],
+   "bbox": [
+    105,
+    71.15232159999994,
+    507.3528754079998,
+    109.93292159999999
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 20,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "image",
+   "page": 3,
+   "content_markdown": "![Figure 2](images/page3_figure_2.png)\n\nFigure 2: (a) Data distribution comparison (overlapping, not stacked) between the original data (n = 29) and the newly-extracted data (n = 87 including the original data). (b) Three most permeable PROTACs from PROTAC-DB. (c) Three permeable PROTACs from the newly mined data.",
+   "confidence": 0.95,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    111.3,
+    123.2,
+    500.8,
+    315.2
+   ],
+   "boxes": [
+    [
+     111.3,
+     123.2,
+     500.8,
+     315.2
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 21,
+   "confidence_method": 0.75,
+   "image_file": "images/page3_figure_2.png"
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "content_markdown": "### 3.2 Model training and evaluation",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     359.7,
+     259.4,
+     369.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 22,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "We train and compare three ridge linear regression models in `scikit-learn` trained on different subsets of the available data to predict logPAMPA. The model is trained on 17 descriptors from [6, 7]: molecular weight, characteristic volume, Crippen logP, heavy atom count, ring count, hydrogen bond acceptor count, hydrogen bond donor count, rotatable bond count, topological polar & non-polar surface areas, fraction of SP3 hybridized carbons, chiral center count, bond count, ring atom count, halogen count, heteroatom count, and flexibility. Alpha is set to 1.0 for all models. We use $5\\times$ repeated 5-fold cross-validation (CV) to train the models, with random splitting stratified on the data source (original vs. newly mined) so that all folds contain both. The same folds are used for all 3 models: for each, we filter the other source out of the training folds while still evaluating on the unfiltered held-out fold. Metrics in Tab. 1 are computed on out-of-fold (OOF) predictions pooled across the 5 test folds rather than averaged per fold, since single folds are too small for a stable rank correlation; we pool per repeat and report the mean and standard deviation across repeats. Random splitting gives an optimistic upper bound for performance, as large clusters of molecules come from the same source and are very similar. Note that this applies only to evaluations in which a model was trained on compounds from the evaluation source; where a source is filtered out of the training folds entirely, the corresponding evaluation has no overlap in any fold and does not depend on the split. The dataset includes 19 molecules with PAMPA measurements reported as bounds, e.g., \"$ < x$\". We use the bound value of $x$ as the ground truth. We also clip values below -10 to -10. We predict logPAMPA ($\\log_{10}$ cm/s) and report RMSE, $R^2$, and Spearman rank correlation $\\rho$, the latter because ADME models, if not sufficiently well-calibrated, can still be used to rank candidates for testing. $\\rho$ is also more robust to unit and inter-laboratory heterogeneity in literature-aggregated data.",
+   "confidence": 0.87,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "boxes": [
+    [
+     107.5,
+     380.2,
+     505.4,
+     619.3
+    ]
+   ],
+   "math_chars": 5,
+   "bbox": [
+    104.532,
+    377.15232160000005,
+    508.385405628,
+    623.2549216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.979,
+     "markitdown": 0.975,
+     "textract": 0.977
+    },
+    "agreement": 0.977,
+    "judge": {
+     "score": 0.8,
+     "issue": "Two paragraphs merged into one element, but content is accurate"
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.85,
+     "agreement": 0.977,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "We train and compare three ridge linear regression models in scikit-learn trained on different subsets of the available data to predict logPAMPA. The model is trained on 17 descriptors from [6, 7]: molecular weight, characteristic volume, Crippen logP, heavy atom count, ring count, hydrogen bond acceptor count, hydrogen bond donor count, rotatable bond count, topological polar & non-polar surface areas, fraction of SP3 hybridized carbons, chiral center count, bond count, ring atom count, halogen count, heteroatom count, and flexibility. Alpha is set to 1.0 for all models. We use 5× repeated 5-fold cross-validation (CV) to train the models, with random splitting stratified on the data source (original vs. newly mined) so that all folds contain both. The same folds are used for all 3 models: for each, we filter the other source out of the training folds while still evaluating on the unfiltered held-out fold. Metrics in Tab. 1 are computed on out-of-fold (OOF) predictions pooled across the 5 test folds rather than averaged per fold, since single folds are too small for a stable rank correlation; we pool per repeat and report the mean and standard deviation across repeats. Random splitting gives an optimistic upper bound for performance, as large clusters of molecules come from the same source and are very similar. Note that this applies only to evaluations in which a model was trained on compounds from the evaluation source; where a source is filtered out of the training folds entirely, the corresponding evaluation has no overlap in any fold and does not depend on the split. The dataset includes 19 molecules with PAMPA measurements reported as bounds, e.g., “< x\". We use the bound value of x as the ground truth. We also clip values below -10 to -10. We predict logPAMPA (log 10 cm/s) and report RMSE, R2, and Spearman rank correlation ρ, the latter because ADME models, if not sufficiently well-calibrated, can still be used to rank candidates for testing. ρ is also more robust to unit and inter-laboratory heterogeneity in literature-aggregated data.",
+   "qc_score": 0.85,
+   "id": 23,
+   "confidence_method": 0.85
+  },
+  {
+   "type": "heading",
+   "page": 3,
+   "content_markdown": "## 4 Results",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     632.2,
+     163.1,
+     644.2
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 24,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 3,
+   "content_markdown": "**Agentic data extraction** Fig. 2 (a) shows the distribution of new data, and compares it to PROTAC- DB 3.0 data. The new data adds more VHL PROTACs compared to CRBN, making the distribution skewed. The same plots show that the new data also includes molecules that are outside the distribution of PROTAC-DB, including smaller and larger molecules. Fig. 2 (b) & (c) compare the top-3 most permeable PROTACs from PROTAC-DB 3.0 with newly-extracted permeable PROTACs. Note that Fig. 2 (c) does not visualize the most permeable PROTACs to avoid showing near duplicates.",
+   "confidence": 0.94,
+   "method": "pdfplumber",
+   "flags": [],
+   "run_in_heading": "Agentic data extraction",
+   "heading_level": 3,
+   "boxes": [
+    [
+     108,
+     657.6,
+     505.7,
+     722.2
+    ]
+   ],
+   "bbox": [
+    105,
+    654.5745833999999,
+    508.6514006919999,
+    726.1519216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 0.9,
+     "issue": "\"most\" should be italicized per the original; minor formatting difference"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 0.9
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 25,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "image",
+   "page": 4,
+   "content_markdown": "![Figure 3](images/page4_figure_3.png)\n\nFigure 3: Parity plots for ridge regression models trained on (a) all data, (b) newly extracted data only, and (c) PROTAC-DB 3.0 only. OOF predictions where the compound was in the training pool; direct predictions otherwise. Solid lines are least-squares fits per data source. Note that the fit for the newly extracted compounds (purple) is close to flat in all three panels, indicating predictions that vary little with the measured value, whereas the PROTAC-DB fit (green) tracks the diagonal even in panel (b), where the model never saw PROTAC-DB compounds.",
+   "confidence": 0.95,
+   "method": "caption-detect",
+   "flags": [],
+   "bbox": [
+    126,
+    78.8,
+    495.9,
+    201.3
+   ],
+   "boxes": [
+    [
+     126,
+     78.8,
+     495.9,
+     201.3
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 26,
+   "confidence_method": 0.75,
+   "image_file": "images/page4_figure_3.png"
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "Table 1: OOF performance for three ridge models across three evaluation sets. Folds are drawn at random, stratified by data source. Best Spearman ρ per evaluation set in bold; second best underlined. Values are mean (standard deviation) across 5 repeats of the CV.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [
+    "caption"
+   ],
+   "boxes": [
+    [
+     107.7,
+     290.3,
+     505.1,
+     319.2
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.97
+    },
+    "agreement": 0.99,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 0.99,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 27,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "table",
+   "page": 4,
+   "content_markdown": "| Method | Evaluation data | Spearman ρ ↑ | RMSE ↓ | R2 ↑ |\n|---|---|---|---|---|\n| Ridge (PROTAC-DB 3.0) | PROTAC-DB 3.0 | 0.82 (0.06) | 0.67 (0.08) | 0.67 (0.08) |\n| Ridge (New) | PROTAC-DB 3.0 | 0.80 (0.02) | 1.07 (0.04) | 0.18 (0.06) |\n| Ridge (All) | PROTAC-DB 3.0 | 0.82 (0.03) | 0.82 (0.07) | 0.51 (0.08) |\n| Ridge (PROTAC-DB 3.0) | New data | 0.12 (0.03) | 1.96 (0.03) | -0.88 (0.06) |\n| Ridge (New) | New data | 0.30 (0.09) | 1.47 (0.05) | -0.07 (0.08) |\n| Ridge (All) | New data | 0.33 (0.06) | 1.40 (0.04) | 0.04 (0.05) |\n| Ridge (PROTAC-DB 3.0) | All data | 0.36 (0.03) | 1.64 (0.03) | -0.34 (0.05) |\n| Ridge (New) | All data | 0.50 (0.05) | 1.35 (0.04) | 0.09 (0.05) |\n| Ridge (All) | All data | 0.53 (0.04) | 1.23 (0.04) | 0.24 (0.05) |",
+   "confidence": 0.92,
+   "method": "rule-table+gap-columns",
+   "flags": [],
+   "bbox": [
+    131.952,
+    317.694,
+    477.805,
+    454.404
+   ],
+   "boxes": [
+    [
+     132,
+     317.7,
+     477.8,
+     454.4
+    ]
+   ],
+   "evidence": {
+    "table_candidates": [
+     "engine",
+     "textract"
+    ],
+    "tool_support": {
+     "pypdf": 0.859,
+     "markitdown": 0.859,
+     "textract": 0.836
+    },
+    "agreement": 0.851,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "rectangular": true,
+     "mostly_filled": true
+    },
+    "signals": {
+     "method": 0.85,
+     "agreement": 0.851,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 28,
+   "confidence_method": 0.85
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "**Permeability modeling** Tab. 1 reports OOF performance for the three models across the three evaluation sets. Evaluated on PROTAC-DB 3.0, all three models reach $\\rho$ between 0.80 and 0.82, and the model trained on PROTAC-DB reaches $R^2 = 0.67$. Evaluated on the newly extracted compounds, the same models reach $\\rho$ between 0.12 and 0.33, with $R^2$ at or below zero in every case. The largest gap is for the model trained on PROTAC-DB 3.0, which falls from $\\rho = 0.82$ on PROTAC-DB to $\\rho = 0.12$ on the new compounds, while the model trained only on the new compounds retains $\\rho = 0.80$ on PROTAC-DB, which it never saw during training. Parity plots in Fig. 3 show, per compound, the mean of the five OOF predictions (no prediction comes from a model trained on that compound).",
+   "confidence": 0.97,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "run_in_heading": "Permeability modeling",
+   "heading_level": 3,
+   "boxes": [
+    [
+     108,
+     472.9,
+     505.2,
+     570.2
+    ]
+   ],
+   "math_chars": 9,
+   "bbox": [
+    105,
+    469.86858340000003,
+    508.246590328,
+    574.1739216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.933,
+     "markitdown": 0.933,
+     "textract": 0.933
+    },
+    "agreement": 0.933,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.933,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "**Permeability modeling** Tab. 1 reports OOF performance for the three models across the three evaluation sets. Evaluated on PROTAC-DB 3.0, all three models reach ρ between 0.80 and 0.82, and the model trained on PROTAC-DB reaches R2 = 0.67. Evaluated on the newly extracted compounds, the same models reach ρ between 0.12 and 0.33, with R2 at or below zero in every case. The largest gap is for the model trained on PROTAC-DB 3.0, which falls from ρ = 0.82 on PROTAC-DB to ρ = 0.12 on the new compounds, while the model trained only on the new compounds retains ρ = 0.80 on PROTAC-DB, which it never saw during training. Parity plots in Fig. 3 show, per compound, the mean of the five OOF predictions (no prediction comes from a model trained on that compound).",
+   "qc_score": 0.95,
+   "id": 29,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "heading",
+   "page": 4,
+   "content_markdown": "## 5 Discussion",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     586.5,
+     179.7,
+     598.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 30,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 4,
+   "content_markdown": "**Performance on PROTAC-DB 3.0 does not transfer.** As shown in Tab. 1, a model trained on PROTAC-DB 3.0 compounds predicts newly extracted compounds barely better than chance ($\\rho = 0.12$, $R^2 = -0.88$), while a model trained only on the newly extracted compounds predicts PROTAC-DB 3.0 nearly as well as a model trained on PROTAC-DB itself ($\\rho = 0.80$ versus 0.82), despite never having seen a PROTAC-DB structure during training. Fig. 3 shows the same asymmetry. Notably, both of these are cross-source evaluations in which the model saw no compound from the evaluation set in any fold, so unlike the within-source entries in Tab. 1 they do not depend on how folds were drawn. We believe a model trained on PROTAC-DB data does not generalize to the newly-extracted data because PROTAC-DB spans a narrow region of degrader chemistry that the extracted set includes.",
+   "confidence": 0.98,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "run_in_heading": "Performance on PROTAC-DB 3.0 does not transfer",
+   "heading_level": 3,
+   "boxes": [
+    [
+     107.7,
+     613.9,
+     505.7,
+     722.2
+    ]
+   ],
+   "math_chars": 2,
+   "bbox": [
+    104.671,
+    610.9375834,
+    508.7392708239999,
+    726.1519216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.981,
+     "markitdown": 0.981,
+     "textract": 0.981
+    },
+    "agreement": 0.981,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.981,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "**Performance on PROTAC-DB 3.0 does not transfer.** As shown in Tab. 1, a model trained on PROTAC-DB 3.0 compounds predicts newly extracted compounds barely better than chance (ρ = 0.12, R2 = −0.88), while a model trained only on the newly extracted compounds predicts PROTAC-DB 3.0 nearly as well as a model trained on PROTAC-DB itself (ρ = 0.80 versus 0.82), despite never having seen a PROTAC-DB structure during training. Fig. 3 shows the same asymmetry. Notably, both of these are cross-source evaluations in which the model saw no compound from the evaluation set in any fold, so unlike the within-source entries in Tab. 1 they do not depend on how folds were drawn. We believe a model trained on PROTAC-DB data does not generalize to the newly-extracted data because PROTAC-DB spans a narrow region of degrader chemistry that the extracted set includes.",
+   "qc_score": 0.95,
+   "id": 31,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 5,
+   "content_markdown": "**The public record is organized by publication, not by chemistry.** Both datasets are assembled from the literature, yet behave very differently under the same model, likely due to how data is generally reported in the literature. A single publication reporting PAMPA measurements typically contributes many analogues differing only in the linker. Records are therefore strongly correlated within source and sparse between sources, so the effective number of independent observations is far smaller than $n = 87$. In Fig. 3, the vertical band at $\\text{log PAMPA} = -6$ is ten PROTAC-DB compounds from a single publication [24], each reported as \"$< 1$\". Together with values at the clipping floor, 26 of 87 records are bounds rather than point measurements, limiting the $R^2$ a regressor can reach.",
+   "confidence": 0.89,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "run_in_heading": "The public record is organized by publication, not by chemistry",
+   "heading_level": 3,
+   "boxes": [
+    [
+     107.6,
+     74.1,
+     504.3,
+     160.5
+    ]
+   ],
+   "math_chars": 4,
+   "bbox": [
+    104.641,
+    71.08258339999998,
+    507.3495279743999,
+    164.47792160000006
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.968,
+     "markitdown": 0.968,
+     "textract": 0.968
+    },
+    "agreement": 0.968,
+    "judge": {
+     "score": 0.8,
+     "issue": "Minor spacing difference: 'log PAMPA' rendered as '\\text{log PAMPA}' vs 'logPAMPA' in source, but otherwise accurate"
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.968,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "**The public record is organized by publication, not by chemistry.** Both datasets are assembled from the literature, yet behave very differently under the same model, likely due to how data is generally reported in the literature. A single publication reporting PAMPA measurements typically contributes many analogues differing only in the linker. Records are therefore strongly correlated within source and sparse between sources, so the effective number of independent observations is far smaller than n = 87. In Fig. 3, the vertical band at logPAMPA = −6 is ten PROTAC-DB compounds from a single publication [24], each reported as “< 1”. Together with values at the clipping floor, 26 of 87 records are bounds rather than point measurements, limiting the R2 a regressor can reach.",
+   "qc_score": 0.95,
+   "id": 32,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 5,
+   "content_markdown": "**Ranking vs. absolute prediction.** In molecular optimization we want a scoring function that rewards molecules satisfying the desired property, e.g., cellular permeability proxied by PAMPA. $R^2$ is $\\approx 0$ for most models and only weakly positive (0.24) for the model trained on both sources and evaluated on all OOF structures, so absolute predictions are poorly calibrated and cannot serve as a quantitative reward. Spearman $\\rho$ of 0.53 on the same evaluation is more encouraging on the other hand, in the regime where a model can rank candidates for testing. This is lower than the 0.80–0.82 obtained when evaluating on PROTAC-DB alone, but we regard evaluation across all data as the more representative estimate of what a generative model for PROTACs would encounter.",
+   "confidence": 0.98,
+   "method": "pdfplumber+ai-inline-latex",
+   "flags": [
+    "inline_math",
+    "ai_repaired",
+    "qc_pass"
+   ],
+   "run_in_heading": "Ranking vs. absolute prediction",
+   "heading_level": 3,
+   "boxes": [
+    [
+     108,
+     174.5,
+     504.2,
+     260.8
+    ]
+   ],
+   "math_chars": 3,
+   "bbox": [
+    105,
+    171.4515834,
+    507.24951028,
+    264.84792160000006
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 0.983,
+     "markitdown": 0.983,
+     "textract": 0.983
+    },
+    "agreement": 0.983,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true,
+     "brackets_balanced": true,
+     "words_supported_by_tools": true
+    },
+    "signals": {
+     "method": 0.95,
+     "agreement": 0.983,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "rules_text": "**Ranking vs. absolute prediction.** In molecular optimization we want a scoring function that rewards molecules satisfying the desired property, e.g., cellular permeability proxied by PAMPA. R2 is ≈ 0 for most models and only weakly positive (0.24) for the model trained on both sources and evaluated on all OOF structures, so absolute predictions are poorly calibrated and cannot serve as a quantitative reward. Spearman ρ of 0.53 on the same evaluation is more encouraging on the other hand, in the regime where a model can rank candidates for testing. This is lower than the 0.80–0.82 obtained when evaluating on PROTAC-DB alone, but we regard evaluation across all data as the more representative estimate of what a generative model for PROTACs would encounter.",
+   "qc_score": 0.95,
+   "id": 33,
+   "confidence_method": 0.95
+  },
+  {
+   "type": "text",
+   "page": 5,
+   "content_markdown": "**Transferring curation workflows across endpoint classes.** Rao et al. [4] showed their workflow transfers across compound classes by terminology substitution alone. We find that it also transfers across endpoint classes. However, moving from potency to permeability extraction shifts the difficulty from value extraction to entity resolution, because PAMPA values are more frequently reported beside structures depicted only as images, which text-only extraction cannot resolve. Coupling the workflow to OCSR via DECIMER [5] addressed this. We expect the same challenges to hold for other ADME endpoints reported in medicinal chemistry papers.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "run_in_heading": "Transferring curation workflows across endpoint classes",
+   "heading_level": 3,
+   "boxes": [
+    [
+     108,
+     274.8,
+     504.4,
+     350.3
+    ]
+   ],
+   "bbox": [
+    105,
+    271.8215834,
+    507.36263875599974,
+    354.3079216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 34,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "content_markdown": "### 5.1 Limitations and future work",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     365.6,
+     251.6,
+     375.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 35,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 5,
+   "content_markdown": "Our dataset remains small (n = 87), so CV estimates carry wide uncertainty and cannot support the neural networks that perform best on large harmonized datasets [8]. Folds are drawn at random, stratified only by source, so within-source results in Tab. 1 are optimistic; cross-source comparisons are unaffected, as those models never see a compound from the evaluation source. Because the data is grouped by source publication, leave-one-publication-out CV is the evaluation we would adopt next. The dataset is also restricted to PAMPA, which captures neither active efflux nor cellular context. Next, we did not attempt exhaustive coverage, and screened only 124 articles as a proof of concept here, so the yield reported is a lower bound on what the pipeline may recover. However, we are not sure broader retrieval would change the modeling conclusion: reported PAMPA is dominated by optimization series around fixed scaffolds, thus affecting the effective sample size. One way to leverage this would be to predict differences in logPAMPA between compounds from the same publication, cancelling per-lab and per-assay offsets on data that mostly varies linkers within series, at the cost of no absolute predictions. Lastly, our 17 2D descriptors are blind to the conformational behavior that governs permeability in bRo5 space, where chameleonic folding and intramolecular hydrogen bonding separate compounds with near-identical 2D descriptors [2]. We saw no clear improvement from 3D descriptors in preliminary experiments, although Kim et al. [6] report gains from them on Caco-2 data; revisiting this with a chemically broader dataset is a natural next step.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     107.7,
+     385.8,
+     505.7,
+     570.5
+    ]
+   ],
+   "bbox": [
+    104.691,
+    382.81014439999996,
+    508.74694202599983,
+    574.5369216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 36,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 5,
+   "content_markdown": "## 6 Conclusion",
+   "confidence": 0.98,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     583.2,
+     183.1,
+     595.2
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 37,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 5,
+   "content_markdown": "We set out to improve PROTAC permeability prediction by improving the available data via expertin-the-loop LLM extraction, and arrived at n = 31 → 87 PROTACs with audited PAMPA values. Building models from this data, we found that descriptor models trained on PROTAC-DB 3.0 do not generalize to the broader chemistry that extraction recovers, and on the expanded set absolute predictions are poorly calibrated. Rank correlation remains moderate, plausibly enough to prioritize compounds for testing but not to replace measurement. We expect transferability of models trained on our expanded dataset to be better than that of models trained solely on PROTAC-DB 3.0 data. For a truly generalizable model, we do not think the fix is simply more records. The public PAMPA data for degraders is dominated by series of close analogues reported one publication at a time. What would help is a dataset intentionally built to be modeled: permeability values reported in",
+   "confidence": 0.89,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     107.5,
+     608.5,
+     505.7,
+     722.2
+    ]
+   ],
+   "bbox": [
+    104.532,
+    605.5283216,
+    508.7450491319997,
+    726.1519216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 0.8,
+     "issue": "Missing paragraph break between the two paragraphs in section 6; 'expertin-the-loop' should be 'expert-in-the-loop' (hyphenation difference)"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 38,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "consistent units alongside machine-readable structures rather than images; values released even when unremarkable, so the record is not selected for successful optimization campaigns; measurements spanning chemically distinct series rather than single scaffolds; and, where possible, cellular endpoints such as Caco-2 or MDCK reported alongside PAMPA, so that active transport can be separated from passive diffusion. Predictive models for new modalities depend on high-quality published data, and for PROTAC permeability we are not there yet. We release our pipeline as a step toward better models, and we welcome follow-up work for extracting more signal from the newly-presented data here.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     74.2,
+     505.2,
+     149.6
+    ]
+   ],
+   "bbox": [
+    105,
+    71.15232159999994,
+    508.24134007599963,
+    153.56892160000007
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 39,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "content_markdown": "## Author contributions",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     166.7,
+     215.8,
+     178.6
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 40,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "L.H.: Methodology, Software, Investigation, Data curation, Formal analysis, Validation, Visualization, Writing — original draft. R.M.: Conceptualization, Methodology, Supervision, Funding acquisition, Resources, Project administration, Writing — review & editing.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     107.5,
+     191.6,
+     505.2,
+     223.4
+    ]
+   ],
+   "bbox": [
+    104.532,
+    188.5575834,
+    508.24880516099955,
+    227.4079216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 41,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "content_markdown": "## Acknowledgments and disclosure of funding",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     240.5,
+     333.5,
+     252.5
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 42,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "We thank Dr. Farzaneh Jalalypour for helpful discussions. LH and RM acknowledge funding provided by the Chalmers Health Engineering Area of Advance, as well as the Wallenberg AI, Autonomous Systems, and Software Program (WASP), supported by the Knut and Alice Wallenberg Foundation. Computational resources were provided by the National Academic Infrastructure for Supercomputing in Sweden (NAISS), funded by the Swedish Research Council. Computational resources were provided on the Berzelius system funded by the Knut and Alice Wallenberg foundation and operated by NAISS. The authors declare no competing interests.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     107.5,
+     265.5,
+     505.7,
+     340.9
+    ]
+   ],
+   "bbox": [
+    104.532,
+    262.4663216,
+    508.7474401559998,
+    344.8839216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 43,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "content_markdown": "## Software and data availability",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     358,
+     261.1,
+     369.9
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 44,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "key_value",
+   "page": 6,
+   "content_markdown": "Data and code are available at: https://github.com/xhudec2/protac-permeability",
+   "confidence": 0.85,
+   "method": "label+typed-value",
+   "flags": [],
+   "key": "Data and code are available at",
+   "value": "https://github.com/xhudec2/protac-permeability",
+   "boxes": [
+    [
+     108,
+     382.9,
+     473.4,
+     393
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.932
+    },
+    "agreement": 0.977,
+    "judge": {
+     "score": 0.8,
+     "issue": "Minor formatting difference: page shows 'available at https://...' without colon after 'at', and no trailing period difference is negligible"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.75,
+     "agreement": 0.977,
+     "judge": 0.8
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 45,
+   "confidence_method": 0.75
+  },
+  {
+   "type": "heading",
+   "page": 6,
+   "content_markdown": "## References",
+   "confidence": 0.94,
+   "method": "font-size+numbering",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     410,
+     163.5,
+     422
+    ]
+   ],
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.7,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 46,
+   "confidence_method": 0.7
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "[1] Miklós Békés, David R Langley, and Craig M Crews. PROTAC targeted protein degraders: the past is prologue. Nature Reviews Drug Discovery, 21(3):181–200, 2022.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     113,
+     429.5,
+     504,
+     450.4
+    ]
+   ],
+   "bbox": [
+    109.981,
+    426.48332159999995,
+    507.00328621139977,
+    454.35492159999995
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 47,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "[2] Pär Matsson, Bradley C Doak, Björn Over, and Jan Kihlberg. Cell permeability beyond the rule of 5. Advanced Drug Delivery Reviews, 101:42–61, 2016.",
+   "confidence": 0.97,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     113,
+     459.8,
+     504,
+     480.7
+    ]
+   ],
+   "bbox": [
+    109.98100000000001,
+    456.8423216,
+    507.0033957999997,
+    484.7139216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.937
+    },
+    "agreement": 0.979,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 0.979,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 48,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "[3] Jingxuan Ge, Shimeng Li, Gaoqi Weng, Huating Wang, Meijing Fang, Huiyong Sun, Yafeng Deng, Chang-Yu Hsieh, Dan Li, and Tingjun Hou. PROTAC-DB 3.0: an updated database of PROTACs with extended pharmacokinetic parameters. Nucleic Acids Research, 53(D1):",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     113,
+     490.2,
+     505.4,
+     522
+    ]
+   ],
+   "bbox": [
+    109.98100000000001,
+    487.2023216,
+    508.3846106639998,
+    525.9829216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 49,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "D1510–D1515, January 2025. ISSN 0305-1048, 1362-4962. doi: 10.1093/nar/gkae768. URL https://academic.oup.com/nar/article/53/D1/D1510/7748092.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     129.6,
+     522.9,
+     504.5,
+     543.9
+    ]
+   ],
+   "bbox": [
+    126.57900000000001,
+    519.9293216,
+    507.4926989363998,
+    547.8606972
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 50,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "[4] Yaochen Rao, Farzaneh Jalalypour, N. M. Anoop Krishnan, and Rocío Mercado. Beyond Manual Curation: Augmenting Targeted Protein Degradation Databases via Agentic Literature Extraction Workflows, 2026. URL https://arxiv.org/abs/2605.11221. Version Number: 1.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     113,
+     553.3,
+     505.4,
+     596
+    ]
+   ],
+   "bbox": [
+    109.98100000000001,
+    550.2883216,
+    508.38698154400004,
+    599.9789216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 51,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "[5] Kohulan Rajan, Henning Otto Brinkhaus, M. Isabel Agea, Achim Zielesny, and Christoph Steinbeck. DECIMER.ai: an open platform for automated optical chemical structure identification, segmentation and recognition in scientific publications. Nature Communications, 14(1):5045, August 2023. ISSN 2041-1723. doi: 10.1038/s41467-023-40782-0. URL https://www.nature.com/articles/s41467-023-40782-0.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     113,
+     605.5,
+     505.6,
+     659.1
+    ]
+   ],
+   "bbox": [
+    109.981,
+    602.4663216,
+    508.64881881599996,
+    663.1246972
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 52,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "[6] Bryant Kim, Robert P. Sheridan, Ruibo Zhang, Emilia P. Barros, Jennifer Johnston, and Li Xiao.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     113,
+     668.6,
+     505.7,
+     678.5
+    ]
+   ],
+   "bbox": [
+    109.98100000000001,
+    665.5533216,
+    508.7412717439998,
+    682.5159216
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 53,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 6,
+   "content_markdown": "Enhancing Permeability Prediction of Heterobifunctional Degraders Using Machine Learning and Metadynamics-Informed 3D Molecular Descriptors. Journal of Chemical Information and Modeling, 65(22):12563–12578, November 2025. ISSN 1549-9596, 1549-960X. doi: 10.1021/ acs.jcim.5c01600. URL https://pubs.acs.org/doi/10.1021/acs.jcim.5c01600.",
+   "confidence": 0.98,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     129.2,
+     679.5,
+     504.6,
+     722.2
+    ]
+   ],
+   "bbox": [
+    126.161,
+    676.4623216,
+    507.55873185739966,
+    726.2116972
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 1
+    },
+    "agreement": 1,
+    "judge": {
+     "score": 1,
+     "issue": ""
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 1,
+     "judge": 1
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 54,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 7,
+   "content_markdown": "[7] Vasanthanathan Poongavanam, Florian Kölling, Anja Giese, Andreas H Göller, Lutz Lehmann, Daniel Meibom, and Jan Kihlberg. Predictive modeling of PROTAC cell permeability with machine learning. ACS Omega, 8(6):5901–5916, 2023. [8] Philip Ivers Ohlsson, Gian Marco Ghiandoni, Susanne Winiwarter, Rocío Mercado, and Vigneshwari Subramanian. Prediction of permeability and efflux using multitask learning. ACS Omega, 10(45):54148, 2025. [9] Giulia Peteani, Minh Tam Davide Huynh, Grégori Gerebtzoff, and Raquel Rodríguez-Pérez. Application of machine learning models for property prediction to targeted protein degraders. Nature Communications, 15(1):5764, 2024. [10] John Dagdelen, Alexander Dunn, Sanghoon Lee, Nicholas Walker, Andrew S Rosen, Gerbrand Ceder, Kristin A Persson, and Anubhav Jain. Structured information extraction from scientific text with large language models. Nature Communications, 15(1):1418, 2024. [11] Yuying Ma, Yang Teng, Jinjin Liu, Yuke Deng, Lingbo Xu, Ruichen Gao, Tingyu Peng, Wei Li, Yue Wei, Linfeng Li, and Zufeng Guo. Systematic Optimization of Proteolysis-Targeting Chimeras for PIN1 Enables Selective Degradation and Antitumor Activity In Vivo. Pharmaceutics, 18(3):288, February 2026. ISSN 1999-4923. doi: 10.3390/pharmaceutics18030288. URL https://www.mdpi.com/1999-4923/18/3/288. [12] Giuseppe Ermondi, Diego Garcia Jimenez, Matteo Rossi Sebastiano, Jan Kihlberg, and Giulia Caron. Conformational Sampling Deciphers the Chameleonic Properties of a VHL-Based Degrader. Pharmaceutics, 15(1):272, January 2023. ISSN 1999-4923. doi: 10.3390/ pharmaceutics15010272. URL https://www.mdpi.com/1999-4923/15/1/272. [13] Sunny Periyasamy, Thyla Jarrett, Joe Truong, and Rachid Skouta. PROTACs in cancer therapy: targeted degradation of GPX4, PARP and epigenetic regulators. Journal of Enzyme Inhibition and Medicinal Chemistry, 41(1):2636394, December 2026. ISSN 1475-6366, 1475-6374. doi: 10.1080/14756366.2026.2636394. URL https://www.tandfonline.com/doi/full/10. 1080/14756366.2026.2636394. [14] Bin Wang, Yunan Li, Tingting Yao, Xinai Shen, Huan Li, Wei Jiang, Xinuo Li, and Zheying Zhu. PROTAC-mediated multi-target protein degradation in Alzheimer’s disease: mechanistic insights, therapeutic applications, and translational challenges. RSC Medicinal Chemistry, 17 (4):1847–1866, 2026. ISSN 2632-8682. doi: 10.1039/D5MD00963D. URL https://pubs. rsc.org/md/article/17/4/1847-1866/1242424. [15] Victoria G. Klein, Chad E. Townsend, Andrea Testa, Michael Zengerle, Chiara Maniaci, Scott J. Hughes, Kwok-Ho Chan, Alessio Ciulli, and R. Scott Lokey. Understanding and Improving the Membrane Permeability of VH032-Based PROTACs. ACS Medicinal Chemistry Letters, 11 (9):1732–1738, September 2020. ISSN 1948-5875, 1948-5875. doi: 10.1021/acsmedchemlett. 0c00265. URL https://pubs.acs.org/doi/10.1021/acsmedchemlett.0c00265. [16] Mazin A. S. Abdelwahid, Eisuke Hayakawa, Keigo Hirai, Mayumi Ishii, Kayoko Kanamitsu, Saori Yasuda, Fumiaki Ohtake, Shinichi Sato, Shusuke Tomoshige, and Minoru Ishikawa. Diastereomeric Branched-Ester dBET1 Analogs Exhibit Conformation-Dependent Differences in Passive Membrane Permeability. Journal of Medicinal Chemistry, 69(3):2900–2915, February 2026. ISSN 0022-2623, 1520-4804. doi: 10.1021/acs.jmedchem.5c02791. URL https: //pubs.acs.org/doi/10.1021/acs.jmedchem.5c02791. [17] Yordanos Esubalew Abeje, Lianne H. E. Wieske, Vasanthanathan Poongavanam, Stefanie Maassen, Yoseph Atilaw, Philipp Cromm, Lutz Lehmann, Mate Erdelyi, Daniel Meibom, and Jan Kihlberg. Impact of Linker Composition on VHL PROTAC Cell Permeability. Journal of Medicinal Chemistry, 68(1):638–657, January 2025. ISSN 0022-2623, 1520-4804. doi: 10.1021/acs.jmedchem.4c02492. URL https://pubs.acs.org/doi/10.1021/acs. jmedchem.4c02492. [18] Vasanthanathan Poongavanam, Yoseph Atilaw, Stephan Siegel, Anja Giese, Lutz Lehmann, Daniel Meibom, Mate Erdelyi, and Jan Kihlberg. Linker-Dependent Folding Rationalizes PROTAC Cell Permeability. Journal of Medicinal Chemistry, 65(19):13029–13040, October 2022. ISSN 0022-2623, 1520-4804. doi: 10.1021/acs.jmedchem.2c00877. URL https: //pubs.acs.org/doi/10.1021/acs.jmedchem.2c00877.",
+   "confidence": 0.93,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     74.2,
+     507.7,
+     722.2
+    ]
+   ],
+   "bbox": [
+    104.99999999999997,
+    71.15232159999994,
+    510.66379362,
+    726.2116972
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 0.998,
+     "textract": 1
+    },
+    "agreement": 0.999,
+    "judge": {
+     "score": 0.9,
+     "issue": "Minor formatting differences (line breaks merged into single block), but content is accurate for the portion shown"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 0.999,
+     "judge": 0.9
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 55,
+   "confidence_method": 0.9
+  },
+  {
+   "type": "text",
+   "page": 8,
+   "content_markdown": "[19] Hao Chen, Nghi H. Nguyen, Charlene M. Magtoto, Simon A. Cobbold, Grace M. Bidgood, Lizeth G. Meza Guzman, Lachlan W. Richardson, Jason Corbin, Amanda E. Au, Bernhard C. Lechtenberg, Rebecca Feltham, Kate D. Sutherland, Christoph Grohmann, Sandra E. Nicholson, and Brad E. Sleebs. Design and characterization of a heterobifunctional degrader of KEAP1. Redox Biology, 59:102552, February 2023. ISSN 22132317. doi: 10.1016/j.redox.2022.102552. URL https://linkinghub.elsevier.com/retrieve/pii/S221323172200324X. [20] Meghri Katerji, Knickole L. Bergman, Eric Lindberg, Maxine R. Rubin, Marwa Afifi, Amy L. Funk, Carolyn C. Woodroofe, Katherine Nyswaner, Kamila Karpin´ska, Remigiusz Serwa, Steven D. Cappell, Anna Marusiak, Rolf E. Swenson, and John F. Brognard. Discovery of potent and selective PROTACs for the protein kinase LZK for the treatment of head and neck cancer. Journal of Biological Chemistry, 301(5):108452, May 2025. ISSN 00219258. doi: 10.1016/j.jbc.2025.108452. URL https://linkinghub.elsevier.com/retrieve/pii/ S0021925825003011. [21] Vittoria Zoppi, Scott J. Hughes, Chiara Maniaci, Andrea Testa, Teresa Gmaschitz, Corinna Wieshofer, Manfred Koegl, Kristin M. Riching, Danette L. Daniels, Andrea Spallarossa, and Alessio Ciulli. Iterative Design and Optimization of Initially Inactive Proteolysis Targeting Chimeras (PROTACs) Identify VZ185 as a Potent, Fast, and Selective von Hippel–Lindau (VHL) Based Dual Degrader Probe of BRD9 and BRD7. Journal of Medicinal Chemistry, 62 (2):699–726, January 2019. ISSN 0022-2623, 1520-4804. doi: 10.1021/acs.jmedchem.8b01413. URL https://pubs.acs.org/doi/10.1021/acs.jmedchem.8b01413. [22] Wen-Hao Guo, Xiaoli Qi, Xin Yu, Yang Liu, Chan-I Chung, Fang Bai, Xingcheng Lin, Dong Lu, Lingfei Wang, Jianwei Chen, Lynn Hsiao Su, Krystle J. Nomie, Feng Li, Meng C. Wang, Xiaokun Shu, José N. Onuchic, Jennifer A. Woyach, Michael L. Wang, and Jin Wang. Enhancing intracellular accumulation and target engagement of PROTACs with reversible covalent chemistry. Nature Communications, 11(1):4268, August 2020. ISSN 2041- 1723. doi: 10.1038/s41467-020-17997-6. URL https://www.nature.com/articles/ s41467-020-17997-6. [23] Yoseph Atilaw, Vasanthanathan Poongavanam, Caroline Svensson Nilsson, Duy Nguyen, Anja Giese, Daniel Meibom, Mate Erdelyi, and Jan Kihlberg. Solution Conformations Shed Light on PROTAC Cell Permeability. ACS Medicinal Chemistry Letters, 12(1):107–114, January 2021. ISSN 1948-5875, 1948-5875. doi: 10.1021/acsmedchemlett.0c00556. URL https: //pubs.acs.org/doi/10.1021/acsmedchemlett.0c00556. [24] Duncan E Scott, Timothy PC Rooney, Elliott D Bayle, Tashfina Mirza, Henriette MG Willems, Jonathan H Clarke, Stephen P Andrews, and John Skidmore. Systematic investigation of the permeability of androgen receptor PROTACs. ACS Medicinal Chemistry Letters, 11(8):1539, 2020.",
+   "confidence": 0.93,
+   "method": "pdfplumber",
+   "flags": [],
+   "boxes": [
+    [
+     108,
+     74.2,
+     506.6,
+     505.8
+    ]
+   ],
+   "bbox": [
+    104.99999999999997,
+    71.15232159999994,
+    509.61621243999997,
+    509.78292159999995
+   ],
+   "agreement": 1,
+   "evidence": {
+    "tool_support": {
+     "pypdf": 1,
+     "markitdown": 1,
+     "textract": 0.997
+    },
+    "agreement": 0.999,
+    "judge": {
+     "score": 0.9,
+     "issue": "Minor formatting differences: 'Karpin´ska' should be 'Karpińska'; otherwise content matches well across all references [19]-[24]"
+    },
+    "checks": {
+     "readable": true
+    },
+    "signals": {
+     "method": 0.9,
+     "agreement": 0.999,
+     "judge": 0.9
+    },
+    "weights": {
+     "method": 0.2,
+     "agreement": 0.35,
+     "judge": 0.45
+    }
+   },
+   "id": 56,
+   "confidence_method": 0.9
+  }
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "doc": "wikipedia_python.html",
+ "elements": [
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Python (programming language)"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Paradigm",
+   "value": "Multi-paradigm : object-oriented, procedural ( imperative ), functional, structured, reflective"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Designed by",
+   "value": "Guido van Rossum"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Developer",
+   "value": "Python Software Foundation"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "First appeared",
+   "value": "20 February 1991 ; 35 years ago ( 1991-02-20 )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Stable release",
+   "value": "3.15.2 / 26 October 2026 ; 2 days ago ( 26 October 2026 )"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Typing discipline",
+   "value": "Duck, dynamic, strong ; optional type annotations"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Memory management",
+   "value": "Garbage-collected"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Platform",
+   "value": "64-bit Linux, macOS ; 64- and 32-bit Windows 10 and later and more"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "License",
+   "value": "Python Software Foundation License"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Filename extensions",
+   "value": ".py,.pyc,.pyd,.pyi,.pyw,.pyz"
+  },
+  {
+   "type": "key_value",
+   "page": 1,
+   "key": "Website",
+   "value": "python.org"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": []
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "Python"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python is a high-level, general-purpose programming language that emphasizes code readability, simplicity, and ease-of-writing with the use of significant indentation, an extensive (\"batteries-included\") standard library, and garbage collection."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Guido van Rossum began working on Python in the late 1980s as a successor to the ABC programming language."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "History"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "designer",
+    "Python",
+    "Rossum"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python 2.0 was released on 16 October 2000, featuring many new features such as list comprehensions, cycle-detecting garbage collection, reference counting, and Unicode support."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python 3.0 was released on 3 December 2008, and was a major revision and not completely backward-compatible with earlier versions, with some new semantics and changed syntax."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Design philosophy and features"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python uses dynamic typing and a combination of reference counting and a cycle-detecting garbage collector for memory management."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python's core philosophy is summarized in the Zen of Python (PEP 20) written by Tim Peters, which includes aphorisms such as these:"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "However, Python has received criticism for violating these principles and adding unnecessary language bloat."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python claims to strive for a simpler, less-cluttered syntax and grammar, while giving developers a choice in their coding methodology."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python's developers typically prioritize readability over performance."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "A common neologism in the Python community is pythonic, which has a broad range of meanings related to program style: Pythonic code may use Python idioms well; be natural or show fluency in the language; or conform with Python's minimalist philosophy and emphasis on readability."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Enhancement Proposals"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "There are 3 kinds of PEPs, with those are being standards track PEP, Informational PEP and Process PEP s which has their own unique meanings."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Syntax and semantics"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Indentation"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Statements and control flow"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python does not support tail call optimization or first-class continuations ; according to Van Rossum, the language never will."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Expressions"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "In Python, a distinction between expressions and statements is rigidly enforced, in contrast to languages such as Common Lisp, Scheme, or Ruby."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Typing"
+  },
+  {
+   "type": "image",
+   "page": 1,
+   "caption_keywords": [
+    "hierarchy",
+    "standard",
+    "Python"
+   ]
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python uses duck typing, and it has typed objects but untyped variable names."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Before version 3.0, Python had two kinds of classes, both using the same syntax: old-style and new-style."
+  },
+  {
+   "type": "table",
+   "page": 1,
+   "cells": [
+    [
+     "Type",
+     "Mutability",
+     "Description",
+     "Syntax examples"
+    ],
+    [
+     "bool",
+     "immutable",
+     "Boolean value",
+     "True False"
+    ],
+    [
+     "bytearray",
+     "mutable",
+     "Sequence of bytes",
+     "bytearray ( b 'Some ASCII' ) bytearray ( b \"Some ASCII\" ) bytearray ([ 119, 105, 107, 105 ])"
+    ],
+    [
+     "bytes",
+     "immutable",
+     "Sequence of bytes",
+     "b 'Some ASCII' b \"Some ASCII\" bytes ([ 119, 105, 107, 105 ])"
+    ],
+    [
+     "complex",
+     "immutable",
+     "Complex number with real and imaginary parts",
+     "3 + 2.7 j 3 + 2.7 j 5 j"
+    ],
+    [
+     "dict",
+     "mutable",
+     "Associative array (or dictionary) of key and value pairs; can contain mixed types (keys and values); keys must be a hashable type",
+     "{ 'key1' : 1.0, 3 : False } {}"
+    ],
+    [
+     "frozendict",
+     "immutable",
+     "Same as dict, but read-only",
+     "frozendict(a=1,b=2)"
+    ],
+    [
+     "types.EllipsisType",
+     "immutable",
+     "An ellipsis placeholder to be used as an index in NumPy arrays",
+     "... Ellipsis"
+    ],
+    [
+     "frozenset",
+     "immutable",
+     "Unordered set, contains no duplicates; can contain mixed types, if hashable",
+     "frozenset ({ 4.0, 'string', True }) frozenset ()"
+    ],
+    [
+     "list",
+     "mutable",
+     "List, can contain mixed types",
+     "[ 4.0, 'string', True ] []"
+    ],
+    [
+     "types.NoneType",
+     "immutable",
+     "An object representing the absence of a value, often called null in other languages",
+     "None"
+    ],
+    [
+     "types.NotImplementedType",
+     "immutable",
+     "A placeholder that can be returned from overloaded operators to indicate unsupported operand types",
+     "NotImplemented"
+    ],
+    [
+     "range",
+     "immutable",
+     "An immutable sequence of numbers, commonly used for iterating a specific number of times in for loops",
+     "range ( − 1, 10 ) range ( 10, − 5, − 2 )"
+    ],
+    [
+     "set",
+     "mutable",
+     "Unordered set, contains no duplicates; can contain mixed types, if hashable",
+     "{ 4.0, 'string', True } set ()"
+    ],
+    [
+     "str",
+     "immutable",
+     "A character string : sequence of Unicode codepoints",
+     "'Wikipedia' \"Wikipedia\" \"\"\"Spanning multiple lines\"\"\""
+    ]
+   ]
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Arithmetic operations"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "In Python terms, the / operator represents true division (or simply division ), while the // operator represents floor division."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python provides a round function for rounding a float to the nearest integer."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python allows Boolean expressions that contain multiple equality relations to be consistent with general usage in mathematics."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Due to Python's extensive mathematics library and the third-party library NumPy, the language is frequently used for scientific scripting in tasks such as numerical data processing and manipulation."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Function syntax"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Code examples"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Libraries"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python's large standard library is commonly cited as one of its greatest strengths."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Some parts of the standard library are covered by specifications—for example, the Web Server Gateway Interface (WSGI) implementation wsgiref follows PEP 333 —but most parts are specified by their code, internal documentation, and test suites."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Development environments"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Other shells, including IDLE and IPython, add additional capabilities such as improved auto-completion, session-state retention, and syntax highlighting."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Standard desktop IDEs include PyCharm, Spyder, and Visual Studio Code ; there are web browser -based IDEs, such as the following environments:"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Implementations"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Reference implementation"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Other implementations"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "All alternative implementations have at least slightly different semantics."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Unsupported implementations"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Stackless Python is a significant fork of CPython that implements microthreads."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Transpilers to other languages"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "There are several compilers/ transpilers to high-level object languages; the source language is unrestricted Python, a subset of Python, or a language similar to Python:"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Performance"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "There are several approaches to optimizing Python performance, despite the inherent slowness of an interpreted language."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Language development"
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Python's development is conducted mostly through the Python Enhancement Proposal (PEP) process; this process is the primary mechanism for proposing major new features, collecting community input on issues, and documenting Python design decisions."
+  },
+  {
+   "type": "text",
+   "page": 1,
+   "text": "Many alpha, beta, and release-candidates are also released as previews and for testing before final releases."
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Naming"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Languages influenced by Python"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "See also"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Notes"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "References"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Sources"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "Further reading"
+  },
+  {
+   "type": "heading",
+   "page": 1,
+   "text": "External links"
+  }
+ ]
+}
