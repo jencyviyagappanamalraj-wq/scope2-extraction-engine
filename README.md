@@ -18,10 +18,9 @@ knows which parts to trust without needing an answer key.
 | `scope2_serverless/engine/` | `pipeline.py` (full flow), `extract.py` (rules engine), `witnesses.py` (pypdf, MarkItDown, Textract, Azure DI, Docling), `ensemble.py` (agreement, table vote, final score), `ai.py` + `qc.py` (AI repair + AI check), `judge.py` (AI judge), `api_handler.py` / `worker_handler.py` (Lambdas), `index.html` (web app), `business_case.py` |
 | `scope2_serverless/DESIGN.md` | Architecture, how each tool is used, how the score works, every extraction rule, limitations |
 | `scope2_serverless/DEPLOY_STEPS.md` | Step-by-step deployment from AWS CloudShell |
-| `scope2_serverless/scripts/` | `benchmark_api.py` (live timing and cost), `test_client.py`, `compare_tools.py`, `textract_markdown.py` |
-| `tool_per_element/` | Experiment: one tool per element type, scored against the answer keys. Used to choose the tools. |
-| `eval/ground_truth/` | Human-checked answer keys for the test documents (2 papers, 2 Wikipedia pages) |
-| `baselines/`, `scripts/` | Scope 1 baselines kept for comparison |
+| `scope2_serverless/BENCHMARK.md`, `BUSINESS_CASE.md` | Benchmark report and business case (measured on the deployed stack) |
+| `scope2_serverless/scripts/` | `benchmark_api.py` (live timing and cost), `test_client.py`, `compare_tools.py` |
+| `eval/` | `evaluate.py` (scorer), `ground_truth/` (human-checked answer keys: 2 papers, 2 Wikipedia pages), `results.csv`, `outputs/engine_accurate/` (live AI results) |
 
 ## Quickstart
 
