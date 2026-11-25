@@ -9,7 +9,10 @@ __pycache__/
 
 # Big or generated files - never commit these
 *.pdf
-data/
+data/*
+# the two test papers are kept so the benchmark can be re-run
+!data/test_docs/
+!data/test_docs/*.pdf
 output/
 models/
 .aws-sam/
@@ -42,3 +45,16 @@ ai_evidence.md
 
 # keep the live accurate outputs: they are the AI evidence and cannot be re-created without AWS
 !eval/outputs/engine_accurate/
+
+# not part of the deployed product (kept locally: research and Scope 1 material)
+/tool_per_element/
+/baselines/
+/scripts/
+eval/*
+!eval/evaluate.py
+!eval/results.csv
+!eval/ground_truth/
+!eval/outputs/
+eval/outputs/*
+!eval/outputs/engine_accurate/
+scope2_serverless/scripts/textract_markdown.py
